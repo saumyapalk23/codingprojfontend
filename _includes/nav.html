@@ -1,0 +1,93 @@
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+
+<nav class="navbar bg-body-light mt-3 mx-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ site.baseurl }}/">
+      <img src="./assets/images/logo.png" alt="Logo" width="4%" height="4%" class="d-inline-block align-text-middle mx-2">
+      DEL NORTE HIGH SCHOOL CLUBS
+    </a>
+    <div id="state">
+      <!-- login or logout -->
+    </div>  
+  </div>
+</nav>
+
+<nav class="navbar mx-3 navbar-expand-lg bg-body-light border border-success border-top-1 border-bottom-1 border-start-0 border-end-0">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler2">
+      <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.baseurl }}/clubs">Club List</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.baseurl }}/documents">Club Meetings</a>
+        </li>
+      </ul>
+      <!-- <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.baseurl }}/events_front">Interclub Events</a>
+        </li>
+      </ul> -->
+      <a class="btn btn-outline-success text-nowrap" href="{{ site.baseurl }}/search">Club Search</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // const url = "http://localhost:8192/hello"
+  const url = "https://rebeccaaa.tk/hello";
+  // div to store login or user links/profile
+  const state = document.getElementById("state");
+  function authenticated(){
+    const options = {
+      method: 'GET',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'include',
+      headers: {
+      'Content-Type': 'application/json'
+      },
+    };
+    fetch(url, options)
+    .then(response => {
+      if(response.status == 200){ // /hello is accessible
+        console.log("Logged in");
+        const storedData = JSON.parse(localStorage.getItem('ID'));
+        console.log(storedData);
+        // const def = "http://localhost:8192/api/club/";
+        const def = "https://rebeccaaa.tk/api/club/";
+        let find = def + storedData; // add id to url, to fetch specific club info
+        var club = "User";
+        fetch(find, options)
+        .then(response => {
+          if(response.status == 200){
+            response.json().then(data => {
+              console.log(data);
+              console.log(data.name);
+              club = data.name;
+              // display club name, profile, logout button
+              state.innerHTML ='<img src="./assets/images/rename-user.png" width="40px" height="40px" class="d-inline-block align-text-middle"><div class="btn-group"><button id="club-name" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Placeholder</button><ul class="dropdown-menu"><li><a class="dropdown-item" href="{{ site.baseurl }}/profile">Profile</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="{{ site.baseurl }}/delete">Account</a></li><li><a class="dropdown-item" href="#">Logout</a></li></ul></div>';
+              const cn = document.getElementById("club-name");
+              cn.innerHTML = club;
+            })
+          }
+        })
+      }
+      else{ // cannot access protected page /hello
+        console.log("Not logged in");
+        // login button
+        state.innerHTML = '<a class="btn btn-success" href="{{ site.baseurl }}/login">LOG IN</a>';
+      }
+    })
+  }
+  // call function on every page load
+  window.onload = authenticated();
+</script>

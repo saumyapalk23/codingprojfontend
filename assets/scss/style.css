@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inter&family=Libre+Baskerville&display=swap");
+/* "row style" is flexible size and aligns pictures in center */
+.row {
+  align-items: center;
+  display: flex;
+}
+
+/* "column style" is one-third of the width with padding */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.navbar {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.2em;
+}
+
+label {
+  font-family: "Inter", sans-serif;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.05em;
+  color: white;
+}
+
+input {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.05em;
+  width: 100%;
+}
+
+.login {
+  font-family: "Inter", sans-serif;
+}
+
+.table {
+  font-family: "Fira Sans", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+h1, h2, h3 {
+  font-family: "Libre Baskerville", serif;
+}
+
+/*# sourceMappingURL=style.css.map */
