@@ -1,0 +1,21 @@
+{
+	"big_team": "Mr. R",
+	"period": 2,
+	"role": "Management Tool",
+	"individuals": [
+		{
+			"student": "Rohan Gaikwad",
+			"gh-id": "RohanG326",
+			"blog": "link",
+			"gh-insights": 30,
+			"gh-commits": 200
+		},
+		{
+			"student": "Shreya Ahuja",
+			"gh-id": "shreya-ahujaa",
+			"blog": "link",
+			"gh-insights": 32,
+			"gh-commits": 198
+		}
+	]
+}
