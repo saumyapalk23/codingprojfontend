@@ -1,16 +1,10 @@
-
-Madhumita Narayan
-  6:54 PM
 <html>
     <body>
         <h1 class="text-center m-5 text-success">Team Profile</h1>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
-<<<<<<< HEAD
                 <h1>Big Team: Mr. R</h1>
                 <h2>Period 2</h2>
-=======
->>>>>>> d25ea81d0843d3530a427a85556cb304b3ebfbcf
                 <thead>
                     <tr>
                         <th scope="col">Student Name</th>
@@ -46,19 +40,6 @@ Madhumita Narayan
             </table>
         </div>
         <script>
-<<<<<<< HEAD
-            // fetch('test.json')
-            // .then(response => response.json())
-            // .then(data => {
-            //     let table = '<table><tr><th>Name</th><th>GitHub ID</th><th>Blog Link</th><th>GitHub Insights</th><th>GitHub Commits</th></tr>';
-            //     data[0].individuals.forEach((student) => {
-            //     table += <tr><td>${student.student}</td><td>${student['gh-id']}</td><td>${student.blog}</td><td>${student['gh-insights']}</td><td>${student['gh-commits']}</td></tr>;
-            //     });
-            //     table += '</table>';
-            //     document.getElementById('table-container').innerHTML = table;
-            // })
-            // .catch(error => console.error(error));
-=======
             fetch('test.json')
             .then(response => response.json())
             .then(data => {
@@ -70,7 +51,6 @@ Madhumita Narayan
                 document.getElementById('table-container').innerHTML = table;
             })
             .catch(error => console.error(error));
->>>>>>> d25ea81d0843d3530a427a85556cb304b3ebfbcf
         </script>
     </body>
 </html>

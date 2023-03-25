@@ -1,4 +1,4 @@
-# DNHS Club Database
+# John Mortensen Classroom Management Tool
 <head>
     <style>
         .role {
