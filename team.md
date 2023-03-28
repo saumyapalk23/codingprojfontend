@@ -1,30 +1,24 @@
 <html>
     <body>
-        <h1 class="text-center m-5 text-success">DNHS CLUB LIST</h1>
+        <h1 class="text-center m-5 text-success">SCRUM TEAMS</h1>
         <div class="table-responsive mx-5">
             <table class="table table-hover table-bordered border-secondary mb-5">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Purpose</th>
-                        <th scope="col">Club Type(s)</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Club President</th>
-                        <th scope="col">Staff Advisor</th>
-                        <th scope="col">Meeting Time and Location</th>
-                        <th scope="col">Additional Info</th>
-                        <!-- <th scope="col">Official Club?</th> -->
-                        <!-- Links -->
-                        <th scope="col">Meeting Minutes</th>
-                        <th scope="col">Reviews</th>
+                        <th scope="col">Period</th>
+                        <th scope="col">Big Team Name</th>
+                        <!-- Link -->
+                        <th scope="col">Scrum Team Members</th>
+                        <th scope="col">Assignments</th>
+                        <th scope="col">Grades</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider" id="clubs">
                 </tbody>
             </table>
         </div>
-        <script>
+        <!-- <script>
             // prepare fetch urls
             // const club_url = "http://localhost:8192/api/club";
             const club_url = "https://rebeccaaa.tk/api/club";
@@ -88,11 +82,6 @@
                         tr.appendChild(name);
                         tr.appendChild(purpose);
                         tr.appendChild(types);
-                        tr.appendChild(email);
-                        tr.appendChild(president);
-                        tr.appendChild(advisor);
-                        tr.appendChild(meeting);
-                        tr.appendChild(info);
                         // tr.appendChild(official);
                         tr.appendChild(minutes);
                         tr.appendChild(reviews);
@@ -117,6 +106,6 @@
                 tr.appendChild(td);
                 clubContainer.appendChild(tr);
             }
-        </script>
+        </script> -->
     </body>
 </html>
