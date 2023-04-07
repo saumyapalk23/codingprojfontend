@@ -24,8 +24,8 @@
                 // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
             };
-            fetch("https://mrr.rebeccaaa.tk/hello", options)
-            // fetch("http://localhost:8023/hello", options)
+            // fetch("https://mrr.rebeccaaa.tk/hello", options)
+            fetch("http://localhost:8023/hello", options)
             // response is a RESTful "promise" on any successful fetch
             .then(response => {
             // check for response errors
@@ -54,32 +54,16 @@
                 <p id="email"></p>
             </div>
             <div class="mb-3 px-5">
-                <label class="form-label" for="name">CLUB NAME</label>
-                <p id="name"></p>
+                <label class="form-label" for="bigteam">BIG TEAM</label>
+                <p id="bigteam"></p>
             </div>
             <div class="mb-3 px-5">
-                <label class="form-label" for="purpose">PURPOSE</label>
-                <p id="purpose"></p>
+                <label class="form-label" for="names">NAMES</label>
+                <p id="names"></p>
             </div>
             <div class="mb-3 px-5">
-                <label class="form-label" for="types">CLUB TYPE(S)</label>
-                <p id="types"></p>
-            </div>
-            <div class="mb-3 px-5">
-                <label class="form-label" for="president">CLUB PRESIDENT</label>
-                <p id="president"></p>
-            </div>
-            <div class="mb-3 px-5">
-                <label class="form-label" for="advisor">STAFF ADVISOR</label>
-                <p id="advisor"></p>
-            </div>
-            <div class="mb-3 px-5">
-                <label class="form-label" for="meeting">MEETING TIME AND LOCATION</label>
-                <p id="meeting"></p>
-            </div>
-            <div class="mb-3 px-5">
-                <label class="form-label" for="info">ADDITIONAL INFO</label>
-                <p id="info"></p>
+                <label class="form-label" for="period">PERIOD</label>
+                <p id="period"></p>
             </div>
             <a class="btn btn-custom text-nowrap text-light my-3 mx-5 mb-4" type="submit" href="{{ site.baseurl }}/update">Update Profile</a>
         </div>  
@@ -87,8 +71,8 @@
             const storedData = JSON.parse(localStorage.getItem('ID'));
             console.log(storedData);
             // prepare fetch urls
-            // const base_url = "http://localhost:8023/api/team/";
-            const base_url = "https://mrr.rebeccaaa.tk/api/team/";
+            const base_url = "http://localhost:8023/api/team/";
+            // const base_url = "https://mrr.rebeccaaa.tk/api/team/";
             const get_by_id = base_url + storedData;
              // fetch the API
             fetch(get_by_id, options)
@@ -102,20 +86,17 @@
                 // valid response will have JSON data
                 response.json().then(data => {
                     console.log(data);
-                    document.getElementById("name").innerHTML = data.name;
-                    document.getElementById("purpose").innerHTML = data.purpose;
-                    document.getElementById("types").innerHTML = data.types;
+                    document.getElementById("bigteam").innerHTML = data.bigteam;
                     document.getElementById("email").innerHTML = data.email;
-                    document.getElementById("president").innerHTML = data.president;
-                    document.getElementById("advisor").innerHTML = data.advisor;
-                    document.getElementById("meeting").innerHTML = data.meeting;
-                    document.getElementById("info").innerHTML = data.info;    
+                    document.getElementById("names").innerHTML = data.names;
+                    document.getElementById("period").innerHTML = data.period;
                 })
             })
             // catch fetch errors (ie Nginx ACCESS to server blocked)
             .catch(err => {
                 error(err + " " + get_by_id);
             });
-        </script>  
-    </body>    
+        </script>
+    </body>
+
 </html>

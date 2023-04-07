@@ -13,23 +13,19 @@
             }
         </style>
         <script>
-            const update_url = "https://rebeccaaa.tk/api/club/update/";
-            // const update_url = "http://localhost:8192/api/club/update/";
+            const update_url = "https://mrr.rebeccaaa.tk/api/team/update/";
+            // const update_url = "http://localhost:8023/api/team/update/";
             function update(){
+                var bigteam = document.getElementById("bigteam").value;
                 var email = document.getElementById("username").value;
                 var pwd = document.getElementById("password").value;
-                var name = document.getElementById("name").value;
-                var purpose = document.getElementById("purpose").value;
-                var types = document.getElementById("types").value;
-                var president = document.getElementById("president").value;
-                var advisor = document.getElementById("advisor").value;
-                var meeting = document.getElementById("meeting").value;
-                var info = document.getElementById("info").value;
+                var names = document.getElementById("names").value;
+                var period = document.getElementById("period").value;
                 // confirm requirements, matching
                 securePassword();
                 validatePassword();
                 // store data in JavaScript object
-                let data = {email: email, password: pwd, name: name, types: types, purpose: purpose, president: president, advisor: advisor, meeting: meeting, info: info, official: null};
+                let data = {bigteam: bigteam, email: email, names: names, period: period, password: pwd};
                 console.log(data);
                 // get ID of currently logged in user from sessionStorage
                 const storedData = JSON.parse(localStorage.getItem('ID'));
@@ -77,44 +73,27 @@
                 <label class="form-label" for="username">EMAIL</label>
                 <input class="form-control" type="email" id="username" name="username" size="20" required>
             </div>
-            <div class="mb-3 px-5">    
+            <div class="mb-3 px-5">
                 <label class="form-label" for="password">PASSWORD</label>
                 <input class="form-control" type="password" id="password" name="password" size="20" required>
+                <p id="message">Password must be a minmum of 8 characters, with at least one number, one uppercase, and one lowercase letter.</p>
             </div>
-             <div class="mb-3 px-5">
+            <div class="mb-3 px-5">
                 <label class="form-label" for="password">RETYPE PASSWORD</label>
                 <input class="form-control" type="password" id="confirm_password" name="password" size="20" required>
-            </div>    
+            </div>
             <div class="mb-3 px-5">
-                <label class="form-label" for="name">CLUB NAME</label>
-                <input class="form-control" type="text" id="name" name="name" size="20" required>
-            </div>    
-            <div class="mb-3 px-5">               
-                <label class="form-label" for="purpose">PURPOSE</label>
-                <input class="form-control" type="text" id="purpose" name="purpose" size="100" required>
-            </div>    
-            <div class="mb-3 px-5">        
-                <label class="form-label" for="types">CLUB TYPE(S)</label>
-                <label class="form-label">(Advocacy/Awareness, Athletics, Competition, Computer Science, Cultural, Environment, Other Interests, Service, STEM, Visual/Performing Arts)</label>
-                <input class="form-control" type="text" id="types" name="types" size="20" required>
-            </div>    
-            <div class="mb-3 px-5">        
-                <label class="form-label" for="president">CLUB PRESIDENT</label>
-                <input class="form-control" type="text" id="president" name="president" size="20" required>
-            </div>    
-            <div class="mb-3 px-5">        
-                <label class="form-label" for="advisor">STAFF ADVISOR</label>
-                <input class="form-control" type="text" id="advisor" name="advisor" size="20" required>
-            </div>    
-            <div class="mb-3 px-5">        
-                <label class="form-label" for="meeting">MEETING TIME AND LOCATION</label>
-                <input class="form-control" type="text" id="meeting" name="meeting" size="20" required>
+                <label class="form-label" for="bigteam">BIG TEAM</label>
+                <input class="form-control" type="text" id="bigteam" name="bigteam" size="250" required>
             </div>
-            <div class="mb-3 px-5">        
-                <label class="form-label" for="info">ADDITIONAL INFO</label>
-                <label class="form-label">(Contact info, registration forms, social media, website)</label>
-                <input class="form-control" type="text" id="info" name="info" size="20">
+            <div class="mb-3 px-5">
+                <label class="form-label" for="names">NAMES</label>
+                <input class="form-control" type="text" id="names" name="names" size="50" required>
             </div>
+            <div class="mb-3 px-5">
+                <label class="form-label" for="period">PERIOD</label>
+                <input class="form-control" type="text" id="period" name="period" size="20" required>
+            </div>      
             <button class="btn btn-custom text-nowrap text-light my-3 mx-5 mb-4" type="submit" onclick="update()">Update</button>
         </div>
         <script>

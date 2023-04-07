@@ -13,8 +13,8 @@
             }
         </style>
         <script>
-            const login_url = "https://mrr.rebeccaaa.tk/authenticate";
-            // const login_url = "http://localhost:8023/authenticate";
+            // const login_url = "https://mrr.rebeccaaa.tk/authenticate";
+            const login_url = "http://localhost:8023/authenticate";
             function login(){
                 var email = document.getElementById("username").value;
                 var password = document.getElementById("password").value;
