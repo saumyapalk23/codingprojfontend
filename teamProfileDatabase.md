@@ -12,7 +12,7 @@
                         <th scope="col">Blog</th>
                         <th scope="col">Github Insights</th>
                         <th scope="col">Github Commits</th>
-                        <!-- <th scope="col">Staff Advisor</th>
+                        <!-- a<th scope="col">Staff Advisor</th>
                         <th scope="col">Meeting Time and Location</th>
                         <th scope="col">Additional Info</th>
                         <<th scope="col">Official Club?</th> -->
