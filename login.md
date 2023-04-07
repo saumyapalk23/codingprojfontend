@@ -13,8 +13,8 @@
             }
         </style>
         <script>
-            const login_url = "https://rebeccaaa.tk/authenticate";
-            // const login_url = "http://localhost:8192/authenticate";
+            const login_url = "https://mrr.rebeccaaa.tk/authenticate";
+            // const login_url = "http://localhost:8023/authenticate";
             function login(){
                 var email = document.getElementById("username").value;
                 var password = document.getElementById("password").value;
@@ -63,7 +63,7 @@
     </head>
     <body>
         <div class="bg-success w-50 mx-auto m-5">
-            <h2 class="text-light mx-5 pt-5">CLUB LOGIN</h2>
+            <h2 class="text-light mx-5 pt-5">TEAM LOGIN</h2>
             <!-- 'email' is mapped to 'username' for Spring Security -->
             <div class="mb-3 px-5">
                 <label class="form-label" for="username">EMAIL</label>
@@ -75,7 +75,7 @@
             </div>    
             <button class="btn btn-custom text-nowrap text-light my-3 mx-5" type="submit" onclick="login()">Log In</button>
             <div class="text-light mx-5 pb-3">
-                <p class="login">Creating a new club? <a class="text-light" href="{{ site.baseurl }}/signup">Sign Up</a></p>
+                <p class="login">Creating a new team? <a class="text-light" href="{{ site.baseurl }}/signup">Sign Up</a></p>
             </div>
         </div>
     </body>

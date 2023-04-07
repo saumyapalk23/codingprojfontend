@@ -24,8 +24,8 @@
                 // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
             };
-            fetch("https://rebeccaaa.tk/hello", options)
-            // fetch("http://localhost:8192/hello", options)
+            fetch("https://mrr.rebeccaaa.tk/hello", options)
+            // fetch("http://localhost:8023/hello", options)
             // response is a RESTful "promise" on any successful fetch
             .then(response => {
             // check for response errors
@@ -87,8 +87,8 @@
             const storedData = JSON.parse(localStorage.getItem('ID'));
             console.log(storedData);
             // prepare fetch urls
-            // const base_url = "http://localhost:8192/api/club/";
-            const base_url = "https://rebeccaaa.tk/api/club/";
+            // const base_url = "http://localhost:8023/api/team/";
+            const base_url = "https://mrr.rebeccaaa.tk/api/team/";
             const get_by_id = base_url + storedData;
              // fetch the API
             fetch(get_by_id, options)

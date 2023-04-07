@@ -28,22 +28,22 @@
       </ul>
       <ul class="navbar-nav me-auto mb-1 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/documents">Club Meetings</a>
+          <a class="nav-link" href="{{ site.baseurl }}/documents">GRADES</a>
         </li>
       </ul>
       <ul class="navbar-nav me-auto mb-1 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/teamProfileDatabase">Team Profile</a>
+          <a class="nav-link" href="{{ site.baseurl }}/teamProfileDatabase">TEAM PROFILES</a>
         </li>
       </ul>
-      <a class="btn btn-outline-success text-nowrap" href="{{ site.baseurl }}/search">Club Search</a>
+      <a class="btn btn-outline-success text-nowrap" href="{{ site.baseurl }}/search">SEARCH TEAMS</a>
     </div>
   </div>
 </nav>
 
 <script>
-  // const url = "http://localhost:8192/hello"
-  const url = "https://rebeccaaa.tk/hello";
+  // const url = "http://localhost:8023/hello"
+  const url = "https://mrr.rebeccaaa.tk/hello";
   // div to store login or user links/profile
   const state = document.getElementById("state");
   function authenticated(){
@@ -62,8 +62,8 @@
         console.log("Logged in");
         const storedData = JSON.parse(localStorage.getItem('ID'));
         console.log(storedData);
-        // const def = "http://localhost:8192/api/club/";
-        const def = "https://rebeccaaa.tk/api/club/";
+        // const def = "http://localhost:8023/api/team/";
+        const def = "https://mrr.rebeccaaa.tk/api/team/";
         let find = def + storedData; // add id to url, to fetch specific club info
         var club = "User";
         fetch(find, options)
