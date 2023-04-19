@@ -8,22 +8,21 @@
                         <th scope="col">ID</th>
                         <th scope="col">Period</th>
                         <th scope="col">Big Team Name</th>
-                        <!-- Link -->
                         <th scope="col">Scrum Team Members</th>
                         <th scope="col">Assignments</th>
                         <th scope="col">Grades</th>
                     </tr>
                 </thead>
-                <tbody class="table-group-divider" id="clubs">
+                <tbody class="table-group-divider" id="team">
                 </tbody>
             </table>
         </div>
-        <!-- <script>
+        <script>
             // prepare fetch urls
-            // const club_url = "http://localhost:8192/api/club";
-            const club_url = "https://rebeccaaa.tk/api/club";
-            const get_url = club_url + "/";
-            const clubContainer = document.getElementById("clubs");
+            // const team_url = "http://localhost:8023/api/team";
+            const team_url = "https://mrr.rebeccaaa.tk/api/team";
+            const get_url = team_url + "/";
+            const teamContainer = document.getElementById("team");
             // prepare fetch GET options
             const options = {
                 method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -52,43 +51,31 @@
                         // columns
                         const tr = document.createElement("tr");
                         const id = document.createElement("td");
-                        const name = document.createElement("td");
-                        const purpose = document.createElement("td");
-                        const types = document.createElement("td");
+                        const period = document.createElement("td");
+                        const bigteam = document.createElement("td");
                         const email = document.createElement("td");
-                        const president = document.createElement("td");
-                        const advisor = document.createElement("td");
-                        const meeting = document.createElement("td");
-                        const info = document.createElement("td");
-                        // const official = document.createElement("td");
+                        const names = document.createElement("td");
                         // url containers
-                        const minutes = document.createElement("td");
-                        const reviews = document.createElement("td");
+                        const assignments = document.createElement("td");
                         // accessing JSON values
                         id.innerHTML = i;
-                        name.innerHTML = row.name;
-                        purpose.innerHTML = row.purpose;
-                        types.innerHTML = row.types;
-                        email.innerHTML = row.email
-                        president.innerHTML = row.president;
-                        advisor.innerHTML = row.advisor;
-                        meeting.innerHTML = row.meeting;
-                        info.innerHTML = row.info;
-                        var review_str = "{{ site.baseurl }}/reviews?id=" + row.id;
-                        reviews.innerHTML = '<a href="' + review_str +'">' + "Reviews for " + row.name + '</a>';
-                        // official.innerHTML = row.official;
+                        bigteam.innerHTML = row.bigteam;
+                        email.innerHTML = row.email;
+                        names.innerHTML = row.names;
+                        period.innerHTML = row.period;
+                        var assignments_str = "{{ site.baseurl }}/assignments?id=" + row.id;
+                        assignments.innerHTML = '<a href="' + assignments_str +'">' + "Assignments for " + row.name + '</a>';
                         // add all columns to the row
                         tr.appendChild(id);
-                        tr.appendChild(name);
-                        tr.appendChild(purpose);
-                        tr.appendChild(types);
-                        // tr.appendChild(official);
-                        tr.appendChild(minutes);
-                        tr.appendChild(reviews);
+                        tr.appendChild(period);
+                        tr.appendChild(bigteam);
+                        tr.appendChild(email);
+                        tr.appendChild(names);
+                        tr.appendChild(assignments);
                         // add row to table
-                        clubContainer.appendChild(tr);
+                        teamContainer.appendChild(tr);
                         i++;
-                    }    
+                    }
                 })
             })
             // catch fetch errors (ie Nginx ACCESS to server blocked)
@@ -104,8 +91,9 @@
                 const td = document.createElement("td");
                 td.innerHTML = err;
                 tr.appendChild(td);
-                clubContainer.appendChild(tr);
+                teamContainer.appendChild(tr);
             }
-        </script> -->
+        </script>
     </body>
+
 </html>
