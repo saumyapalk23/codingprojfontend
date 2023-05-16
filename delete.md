@@ -57,7 +57,7 @@
      <div class="bg-success w-50 mx-auto m-5">
         <h2 class="text-light mx-5 pt-5">Delete Club</h2>
         <div class="mb-3 px-5">
-            <p>Warning: Clicking the button below will delete your club. It is a destructive action that cannot be undone.</p>
+            <p>Warning!: Clicking the button below will delete your club. It is a destructive action that cannot be undone.</p>
         </div>
         <button class="btn btn-custom text-nowrap text-light my-3 mx-5 mb-4" type="submit" onclick="delete_club()">Delete</button>
      </div>       
