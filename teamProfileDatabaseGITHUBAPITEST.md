@@ -55,10 +55,10 @@
                 // row.insertCell(1).innerHTML = userName.value;
                 // row.insertCell(2).innerHTML = 0;
         }
-        function fetchTotalCommits() {
+        function fetchTotalCommits(username, commitsCell) {
             const url = `https://api.github.com/users/${username}/events`;
-            var tableBody = document.getElementById('students');
-            var numRows = tableBody.getElementsByTagName('tr');
+            // var tableBody = document.getElementById('students');
+            // var numRows = tableBody.getElementsByTagName('tr');
             fetch(url)
                 .then(response => response.json())
                 .then(repos => {
@@ -70,6 +70,7 @@
               const commitsCell = document.getElementById(`${username}-commits`);
               commitsCell.textContent = commitCount;
                 })
+                .catch(error => console.error(error));
         }
             // const userName = ;
             // fetch('test.json')
