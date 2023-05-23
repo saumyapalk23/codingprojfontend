@@ -30,10 +30,12 @@
                 // const username = document.getElementById('username').value;
                 // const newRow = document.createElement('tr');
                 // const nameCell = document.createElement('td');
-                var name = document.getElementById("name");
-                var userName = document.getElementById("username");
-                var rowCount = table.rows.length;
-                var row = table.insertRow(rowCount);
+                var tableBody = document.getElementById('students');
+                var nameInput = document.getElementById("name");
+                var userNameInput = document.getElementById("username");
+                var newRow = tableBody.insertRow();
+                var studentNameCell = newRow.insertCell();
+                studentNameCell.textContext = nameInput.value;
                 row.insertCell(0).innerHTML = name.value;
                 row.insertCell(1).innerHTML = userName.value;
                 row.insertCell(2).innerHTML = 0;
