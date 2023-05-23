@@ -33,12 +33,20 @@
                 var tableBody = document.getElementById('students');
                 var nameInput = document.getElementById("name");
                 var userNameInput = document.getElementById("username");
+                //addToTable
                 var newRow = tableBody.insertRow();
                 var studentNameCell = newRow.insertCell();
                 studentNameCell.textContext = nameInput.value;
-                row.insertCell(0).innerHTML = name.value;
-                row.insertCell(1).innerHTML = userName.value;
-                row.insertCell(2).innerHTML = 0;
+                var userNameCell = newRow.insertCell();
+                userNameCell.textContext = userNameInput.value;
+                var totalCommitsCell = newRow.insertCell();
+                totalCommitsCell.textContext = 0;
+                //reset fields
+                nameInput.value = '';
+                usernameInput.value = '';
+                // row.insertCell(0).innerHTML = name.value;
+                // row.insertCell(1).innerHTML = userName.value;
+                // row.insertCell(2).innerHTML = 0;
         }
             const userName = ;
             fetch('test.json')
