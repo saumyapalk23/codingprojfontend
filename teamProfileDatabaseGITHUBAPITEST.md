@@ -11,7 +11,7 @@
                         <th scope="col">Github ID</th>
                         <!-- <th scope="col">Blog</th>
                         <th scope="col">Github Insights</th> -->
-                        <th scope="col">Github Commits</th>
+                        <th scope="col">Number of Public Repos</th>
                         <!--<td id="username-commits"></td>-->
                     </tr>
                 </thead>
