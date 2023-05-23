@@ -12,6 +12,7 @@
                         <!-- <th scope="col">Blog</th>
                         <th scope="col">Github Insights</th> -->
                         <th scope="col">Github Commits</th>
+                        <!--<td id="username-commits"></td>-->
                     </tr>
                 </thead>
                 <tbody class="table-group-divider" id="students">
@@ -61,13 +62,13 @@
             // var numRows = tableBody.getElementsByTagName('tr');
             fetch(url)
                 .then(response => response.json())
-                .then(repos => {
+                .then(data => {
                     // Filter the response to retrieve only the commit events
               const commitEvents = data.filter(event => event.type === 'PushEvent');
               // Get the total number of commits
               const commitCount = commitEvents.reduce((count, event) => count + event.payload.commits.length, 0);
               // Update the table cell with the fetched commit count
-              const commitsCell = document.getElementById(`${username}-commits`);
+              //const commitsCell = document.getElementById(`${username}-commits`);
               commitsCell.textContent = commitCount;
                 })
                 .catch(error => console.error(error));
