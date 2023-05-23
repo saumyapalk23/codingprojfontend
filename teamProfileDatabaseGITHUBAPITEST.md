@@ -56,11 +56,20 @@
                 // row.insertCell(2).innerHTML = 0;
         }
         function fetchTotalCommits() {
-            const url = `https://api.github.com/users/${username}/repos`;
+            const url = `https://api.github.com/users/${username}/events`;
             var tableBody = document.getElementById('students');
             var numRows = tableBody.getElementsByTagName('tr');
             fetch(url)
                 .then(response => response.json())
+                .then(repos => {
+                    // Filter the response to retrieve only the commit events
+              const commitEvents = data.filter(event => event.type === 'PushEvent');
+              // Get the total number of commits
+              const commitCount = commitEvents.reduce((count, event) => count + event.payload.commits.length, 0);
+              // Update the table cell with the fetched commit count
+              const commitsCell = document.getElementById(`${username}-commits`);
+              commitsCell.textContent = commitCount;
+                })
         }
             // const userName = ;
             // fetch('test.json')
