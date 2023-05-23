@@ -9,8 +9,8 @@
                     <tr>
                         <th scope="col">Student Name</th>
                         <th scope="col">Github ID</th>
-                        <th scope="col">Blog</th>
-                        <th scope="col">Github Insights</th>
+                        <!-- <th scope="col">Blog</th>
+                        <th scope="col">Github Insights</th> -->
                         <th scope="col">Github Commits</th>
                     </tr>
                 </thead>
@@ -19,15 +19,24 @@
             </table>
         </div>
         <div>
-            <input type="text" id="username" placeholder="GitHub username">
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="text" id="username" placeholder="GitHub Username">
             <button onclick="addStudent()">Add Student</button>
-            <button onclick="fetchTotalCommits()">Fetch Total Commits</button>
+            <button onclick="fetchTotalCommits()">Fetch Total Commits</button>  
         </div>
         <script>
             function addStudent() {
-                const tableBody = document.getElementById('students');
-                const username = document.getElementById('username').value;
-                const 
+                // const tableBody = document.getElementById('students');
+                // const username = document.getElementById('username').value;
+                // const newRow = document.createElement('tr');
+                // const nameCell = document.createElement('td');
+                var name = document.getElementById("name");
+                var userName = document.getElementById("username");
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+                row.insertCell(0).innerHTML = name.value;
+                row.insertCell(1).innerHTML = userName.value;
+                row.insertCell(2).innerHTML = 0;
         }
             const userName = ;
             fetch('test.json')
