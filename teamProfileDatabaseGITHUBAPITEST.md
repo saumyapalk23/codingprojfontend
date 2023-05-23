@@ -14,7 +14,7 @@
                         <th scope="col">Github Commits</th>
                     </tr>
                 </thead>
-                <tbody class="table-group-divider" id="clubs">
+                <tbody class="table-group-divider" id="students">
                 </tbody>
             </table>
         </div>
@@ -24,6 +24,11 @@
             <button onclick="fetchTotalCommits()">Fetch Total Commits</button>
         </div>
         <script>
+            function addStudent() {
+                const tableBody = document.getElementById('students');
+                const username = document.getElementById('username').value;
+                const 
+        }
             const userName = ;
             fetch('test.json')
             .then(response => response.json())
