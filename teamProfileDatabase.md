@@ -11,7 +11,8 @@
                         <th scope="col">Github ID</th>
                         <th scope="col">Blog</th>
                         <th scope="col">Github Insights</th>
-                        <th scope="col">https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e</th>
+                        <th scope="col">https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e  https://api.github.com/repos/OWNER/REPO/commits
+ </th>
                         <!-- a<th scope="col">Staff Advisor</th>
                         <th scope="col">Meeting Time and Location</th>
                         <th scope="col">Additional Info</th>
