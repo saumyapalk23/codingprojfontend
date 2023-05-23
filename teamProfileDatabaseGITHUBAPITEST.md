@@ -41,6 +41,13 @@
                 userNameCell.textContext = userNameInput.value;
                 var totalCommitsCell = newRow.insertCell();
                 totalCommitsCell.textContext = 0;
+                var buttonCell = newRow.insertCell();
+                var fetchCommitsButton = document.createElement('button');
+                fetchCommitsButton.textContent = 'Fetch Commits';
+                fetchCommitsButton.onclick = function() {
+                fetchTotalCommits(usernameInput.value, totalCommitsCell);
+                };
+                buttonCell.appendChild(fetchCommitsButton);
                 //reset fields
                 nameInput.value = '';
                 usernameInput.value = '';
@@ -48,18 +55,25 @@
                 // row.insertCell(1).innerHTML = userName.value;
                 // row.insertCell(2).innerHTML = 0;
         }
-            const userName = ;
-            fetch('test.json')
-            .then(response => response.json())
-            .then(data => {
-                let table = '<table><tr><th>Name</th><th>GitHub ID</th><th>Blog Link</th><th>GitHub Insights</th><th>GitHub Commits</th></tr>';
-                data[0].individuals.forEach((student) => {
-                table += <tr><td>${student.student}</td><td>${student['gh-id']}</td><td>${student.blog}</td><td>${student['gh-insights']}</td><td>${student['gh-commits']}</td></tr>;
-                });
-                table += '</table>';
-                document.getElementById('table-container').innerHTML = table;
-            })
-            .catch(error => console.error(error));
+        function fetchTotalCommits() {
+            const url = `https://api.github.com/users/${username}/repos`;
+            var tableBody = document.getElementById('students');
+            var numRows = tableBody.getElementsByTagName('tr');
+            fetch(url)
+                .then(response => response.json())
+        }
+            // const userName = ;
+            // fetch('test.json')
+            // .then(response => response.json())
+            // .then(data => {
+            //     let table = '<table><tr><th>Name</th><th>GitHub ID</th><th>Blog Link</th><th>GitHub Insights</th><th>GitHub Commits</th></tr>';
+            //     data[0].individuals.forEach((student) => {
+            //     table += <tr><td>${student.student}</td><td>${student['gh-id']}</td><td>${student.blog}</td><td>${student['gh-insights']}</td><td>${student['gh-commits']}</td></tr>;
+            //     });
+            //     table += '</table>';
+            //     document.getElementById('table-container').innerHTML = table;
+            // })
+            // .catch(error => console.error(error));
         </script>
     </body>
 </html>
