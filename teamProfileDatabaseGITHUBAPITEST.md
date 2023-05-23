@@ -36,9 +36,9 @@
                 //addToTable
                 var newRow = tableBody.insertRow();
                 var studentNameCell = newRow.insertCell();
-                studentNameCell.textContext = nameInput.value;
+                studentNameCell.textContent = nameInput.value;
                 var userNameCell = newRow.insertCell();
-                userNameCell.textContext = userNameInput.value;
+                userNameCell.textContent = userNameInput.value;
                 var totalCommitsCell = newRow.insertCell();
                 totalCommitsCell.textContext = 0;
                 var buttonCell = newRow.insertCell();
