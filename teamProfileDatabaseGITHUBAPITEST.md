@@ -44,7 +44,7 @@
                 totalCommitsCell.textContext = 0;
                 var buttonCell = newRow.insertCell();
                 var fetchCommitsButton = document.createElement('button');
-                fetchCommitsButton.textContent = 'Fetch Commits';
+                fetchCommitsButton.textContent = 'Fetch Repos';
                 fetchCommitsButton.onclick = function() {
                 fetchTotalCommits(userNameInput.value, totalCommitsCell);
                 };
