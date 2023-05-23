@@ -45,7 +45,7 @@
                 var fetchCommitsButton = document.createElement('button');
                 fetchCommitsButton.textContent = 'Fetch Commits';
                 fetchCommitsButton.onclick = function() {
-                fetchTotalCommits(usernameInput.value, totalCommitsCell);
+                fetchTotalCommits(userNameInput.value, totalCommitsCell);
                 };
                 buttonCell.appendChild(fetchCommitsButton);
                 //reset fields
