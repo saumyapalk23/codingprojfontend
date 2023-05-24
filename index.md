@@ -21,7 +21,7 @@
                 <img src="assets/images/dnhsshs.jpg" class="d-block w-100" alt="Image 2">
             </div>
             <div class="carousel-item">
-                <img src="assets/images/dnhsss.gif" class="d-block w-100" alt="Image 3">
+                <img src="assets/images/gymnasuyjm.jpg" class="d-block w-100" alt="Image 3">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
