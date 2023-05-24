@@ -2,8 +2,6 @@
 <br>
 <center> <h1> Meeting Documents Database </h1><center>
 
-
-
 <style>
 body {
   background: hsl(220deg, 10%, 97%);
