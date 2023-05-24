@@ -1,6 +1,6 @@
 <html>
     <body>
-        <h1 class="text-center m-5 text-success">SCRUM TEAMS</h1>
+        <h1 class="text-center m-5 text-success">Scrum Teams</h1>
         <div class="table-responsive mx-5">
             <table class="table table-hover table-bordered border-secondary mb-5">
                 <thead>
