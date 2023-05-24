@@ -7,11 +7,11 @@
                 <h2>Period 2</h2>
                 <thead>
                     <tr>
-                        <th scope="col">Student Name</th>
-                        <th scope="col">Github ID</th>
+                        <th scope="col"> Student Name </th>
+                        <th scope="col"> Github ID </th>
                         <!-- <th scope="col">Blog</th>
                         <th scope="col">Github Insights</th> -->
-                        <th scope="col">Number of Public Repos</th>
+                        <th scope="col"> Number of Public Repos </th>
                         <!--<td id="username-commits"></td>-->
                     </tr>
                 </thead>
