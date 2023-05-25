@@ -73,6 +73,7 @@
 			var newHeaderCell = document.createElement('th');
 			newHeaderCell.textContent = repoName;
 			tableHeader.appendChild(newHeaderCell);
+			//const url = `https://api.github.com/repos/rebecca-123/${repoName}/commits?author=MAnn223`;
 		}
         function fetchGitData(username, studentCell, commitsCell, lastupdateCell) {
             const url = `https://api.github.com/users/${username}`;
