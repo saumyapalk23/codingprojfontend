@@ -1,24 +1,23 @@
 <html>
     <head>
         <style>
-            .bg-success {
-                background-color: #17104e;
-                }
+            .bg-color{
+                background-color: #161666;
+            }
             .btn-custom {
                 color: #fff;
-                background-color: #17104e;
+                background-color: #193387;
                 border-color: #ffffff;
             }
             .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open>.dropdown-toggle.btn-custom {
                 color: #fff;
-                background-color: #17104e;
+                background-color: #157347;
                 border-color: #ffffff;
             }
             /* The message box is shown when the user clicks on the password field */
             #message {
                 display:none;            
                 position: relative;
-                background-color: #17104e;
             }       
         </style>
         <script>
@@ -72,7 +71,7 @@
         </script>
     </head>
     <body>
-        <div class="bg-success w-50 mx-auto m-5">
+        <div class="bg-color w-50 mx-auto m-5">
             <h2 class="text-light mx-5 pt-5">SIGN UP</h2>
             <!-- 'email' is mapped to 'username' for Spring Security -->
             <div class="mb-3 px-5">
