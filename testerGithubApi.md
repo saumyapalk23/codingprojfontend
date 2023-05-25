@@ -66,7 +66,7 @@
                 var fetchCommitsButton = document.createElement('button');
                 fetchCommitsButton.textContent = 'Fetch Data';
                 fetchCommitsButton.onclick = function() {
-                fetchTotalCommits(userNameInput.value, studentNameCell, totalCommitsCell, lastUpdateCell);
+                fetchGitData(userNameInput.value, studentNameCell, totalCommitsCell, lastUpdateCell);
                 };
                 buttonCell.appendChild(fetchCommitsButton);
                 //reset fields
@@ -76,7 +76,7 @@
                 // row.insertCell(1).innerHTML = userName.value;
                 // row.insertCell(2).innerHTML = 0;
         }
-        function fetchTotalCommits(username, studentCell, commitsCell, lastupdateCell) {
+        function fetchGitData(username, studentCell, commitsCell, lastupdateCell) {
             const url = `https://api.github.com/users/${username}`;
             // var tableBody = document.getElementById('students');
             // var numRows = tableBody.getElementsByTagName('tr');
