@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
     <title>Photo Carousel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
@@ -8,12 +7,11 @@
 
 <style>
             .h1{
-                color: #161666;
+                color: #24247a;
             }
             .h3{
-                color: #161666;
+                color: #24247a;
             }
-            </style>
             </style>
 <body>
     <h1 class="text-center m-5">RMR Class Management Tool!</h1>
