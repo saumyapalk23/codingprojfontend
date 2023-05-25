@@ -5,8 +5,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 </head>
 <body>
-    <h1 class="text-center m-5 text-primary">RMR Class Management Tool!</h1>
-    <h3 class="text-center m-5 text-primary">Made by AP CSA Class of '22-'23</h3>
+
+<style>
+            .h1{
+                color: #161666;
+            }
+            .h3{
+                color: #161666;
+            }
+            </style>
+            </style>
+<body>
+    <h1 class="text-center m-5">RMR Class Management Tool!</h1>
+    <h3 class="text-center m-5">Made by AP CSA Class of '22-'23</h3>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
