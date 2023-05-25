@@ -15,7 +15,10 @@
             #message {
                 display:none;            
                 position: relative;
-            }       
+            }    
+            .bg-success {
+                background-color: darkblue;
+            }   
         </style>
         <script>
             // const signup_url = "https://mrr.rebeccaaa.tk/api/team/post";
