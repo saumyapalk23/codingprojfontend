@@ -5,10 +5,7 @@
 </head>
 <body>
 <style>
-            .h1{
-                color: #262682;
-            }
-            .h3{
+            .h1, h3{
                 color: #262682;
             }
             </style>
