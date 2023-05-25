@@ -88,9 +88,13 @@
 				})
 				.catch(error => console.error(error));
 		const repoName = document.getElementById("repo").value;
+		const token = "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";
+		const headers = {
+        Authorization: `Bearer ${token}`
+        };
 		const repoUrl = `https://api.github.com/repos/rebecca-123/${repoName}`
 		if (repoName !== '') {		
-			fetch(repoUrl)
+			fetch(repoUrl, { headers })
 			.then(response => response.json())
 			.then(repoData => {
 			const totalCommits = repoData.length; //endpoint returns all commits, loop through to get counter-increment
