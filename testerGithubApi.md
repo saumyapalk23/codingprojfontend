@@ -1,21 +1,4 @@
 <html>
-<head>
-<style>
-      <style>
-            table {
-                border-collapse: collapse;
-                border-radius: 10px;
-                overflow: hidden;
-            }
-            th, td {
-                padding: 10px;
-                text-align: center;
-                border: 1px solid #161666;
-            }
-            h1, h2 {
-                color: #161666;
-            }
-    </style>
     <body>
         <h1 class="text-center m-5 text-success">Team Profile</h1>
         <div class="table-responsive mx-5">
@@ -42,6 +25,8 @@
             <input type="text" id="username" placeholder="GitHub Username">
             <button onclick="addStudent()">Add Student</button>
             <!--<button onclick="fetchTotalCommits()">Fetch Total Commits</button> -->
+			<input type="text" id="repo" placeholder="Repository Name">
+			<button onclick="addRepo()">Add Repository</button>
         </div>
         <script>
             function addStudent() {
@@ -76,6 +61,19 @@
                 // row.insertCell(1).innerHTML = userName.value;
                 // row.insertCell(2).innerHTML = 0;
         }
+		function addRepo(){
+			var repoNameInput = document.getElementById("repo")
+			var repoName = repoNameInput.value;
+			var tableHeader = document.querySelector('#table-container thead tr');
+			var tableBody = document.getElementById('students');
+			var rows = tableBody.getElementsByTagName('tr');
+			var newHeaderCell = document.createElement('th');
+			newHeaderCell.textContent = repoName;
+			tableHeader.appendChild(newHeaderCell);
+			var newHeaderCell = document.createElement('th');
+			newHeaderCell.textContent = repoName;
+			tableHeader.appendChild(newHeaderCell);
+		}
         function fetchGitData(username, studentCell, commitsCell, lastupdateCell) {
             const url = `https://api.github.com/users/${username}`;
             // var tableBody = document.getElementById('students');
