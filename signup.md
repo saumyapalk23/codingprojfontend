@@ -6,18 +6,19 @@
                 }
             .btn-custom {
                 color: #fff;
-                background-color: #193387;
+                background-color: #17104e;
                 border-color: #ffffff;
             }
             .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open>.dropdown-toggle.btn-custom {
                 color: #fff;
-                background-color: #157347;
+                background-color: #17104e;
                 border-color: #ffffff;
             }
             /* The message box is shown when the user clicks on the password field */
             #message {
                 display:none;            
                 position: relative;
+                background-color: #17104e;
             }       
         </style>
         <script>
