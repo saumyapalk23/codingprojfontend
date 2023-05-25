@@ -18,10 +18,10 @@
                 <img src="assets/images/dnhs.jpg" class="d-block w-100" alt="Image 1">
             </div>
             <div class="carousel-item">
-                <img src="assets/images/dnhsshs.jpg" class="d-block w-100" alt="Image 2">
+                <img src="assets/images/image2.jpg" class="d-block w-100" alt="Image 2">
             </div>
             <div class="carousel-item">
-                <img src="assets/images/gymnasuyjm.jpg" class="d-block w-100" alt="Image 3">
+                <img src="assets/images/image1.jpg" class="d-block w-100" alt="Image 3">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
