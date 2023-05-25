@@ -75,20 +75,32 @@
 			tableHeader.appendChild(newHeaderCell);
 			//const url = `https://api.github.com/repos/rebecca-123/${repoName}/commits?author=MAnn223`;
 		}
-        function fetchGitData(username, studentCell, commitsCell, lastupdateCell, repoName) {
+        function fetchGitData(username, studentCell, commitsCell, lastupdateCell) {
             const url = `https://api.github.com/users/${username}`;
-			const repoUrl = `https://api.github.com/repos/rebecca-123/${repoName}`
             // var tableBody = document.getElementById('students');
             // var numRows = tableBody.getElementsByTagName('tr');
             fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      commitsCell.textContent = data.public_repos;
-      studentCell.textContent = data.name;
-    lastupdateCell.textContent = data.updated_at;
-    })
-    .catch(error => console.error(error));
-        }
+				.then(response => response.json())
+				.then(data => {
+				  commitsCell.textContent = data.public_repos;
+				  studentCell.textContent = data.name;
+				lastupdateCell.textContent = data.updated_at;
+				})
+				.catch(error => console.error(error));
+		const repoName = document.getElementById("repo").value;
+		const repoUrl = `https://api.github.com/repos/rebecca-123/${repoName}`
+		if (repoName !== '') {		
+			fetch(repoUrl)
+			.then(response => response.json())
+			.then(repoData => {
+			const totalCommits = repoData.length; //endpoint returns all commits, loop through to get counter-increment
+			const commitsIndex = Array.from(commitsCell.parentNode.children).indexOf(commitsCell);
+		  const repoCommitsCell = commitsCell.parentNode.insertCell(commitsIndex + 1);
+			  repoCommitsCell.textContent = repoData.public_repos;
+			})
+		.catch(error => console.error(error));
+					}
+	}
             // const userName = ;
             // fetch('test.json')
             // .then(response => response.json())
