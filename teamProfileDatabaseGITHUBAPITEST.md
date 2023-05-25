@@ -1,4 +1,21 @@
 <html>
+<head>
+<style>
+      <style>
+            table {
+                border-collapse: collapse;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            th, td {
+                padding: 10px;
+                text-align: center;
+                border: 1px solid #161666;
+            }
+            h1, h2 {
+                color: #161666;
+            }
+    </style>
     <body>
         <h1 class="text-center m-5 text-success">Team Profile</h1>
         <div class="table-responsive mx-5">

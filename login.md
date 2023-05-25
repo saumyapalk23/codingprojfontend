@@ -1,6 +1,9 @@
 <html>
     <head>
         <style>
+            .bg-color{
+                background-color: #161666;
+            }
             .btn-custom {
                 color: #fff;
                 background-color: #198754;
@@ -62,7 +65,7 @@
         </script>
     </head>
     <body>
-        <div class="bg-success w-50 mx-auto m-5">
+        <div class="bg-color w-50 mx-auto m-5">
             <h2 class="text-light mx-5 pt-5">TEAM LOGIN</h2>
             <!-- 'email' is mapped to 'username' for Spring Security -->
             <div class="mb-3 px-5">
