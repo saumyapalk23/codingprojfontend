@@ -1,6 +1,9 @@
 <html>
     <head>
         <style>
+            .bg-success {
+                background-color: #10104c;
+                }
             .btn-custom {
                 color: #fff;
                 background-color: #193387;
@@ -8,17 +11,14 @@
             }
             .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open>.dropdown-toggle.btn-custom {
                 color: #fff;
-                background-color: #121761;
+                background-color: #157347;
                 border-color: #ffffff;
             }
             /* The message box is shown when the user clicks on the password field */
             #message {
                 display:none;            
                 position: relative;
-            }    
-            .bg-success {
-                background-color: darkblue;
-            }   
+            }       
         </style>
         <script>
             // const signup_url = "https://mrr.rebeccaaa.tk/api/team/post";
