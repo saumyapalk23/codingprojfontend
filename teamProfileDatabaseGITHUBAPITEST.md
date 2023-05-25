@@ -13,11 +13,11 @@
                 border: 1px solid #161666;
             }
             h1, h2 {
-                color: #161666;
+                color: #262682;
             }
     </style>
     <body>
-        <h1 class="text-center m-5 text-success">Team Profile</h1>
+        <h1 class="text-center m-5">Team Profile</h1>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
                 <h1>Big Team: Mr. R</h1>

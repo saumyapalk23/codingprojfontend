@@ -4,13 +4,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 </head>
 <body>
-
 <style>
             .h1{
-                color: #24247a;
+                color: #262682;
             }
             .h3{
-                color: #24247a;
+                color: #262682;
             }
             </style>
 <body>
