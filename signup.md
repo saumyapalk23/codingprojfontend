@@ -8,7 +8,7 @@
             }
             .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open>.dropdown-toggle.btn-custom {
                 color: #fff;
-                background-color: #157347;
+                background-color: #121761;
                 border-color: #ffffff;
             }
             /* The message box is shown when the user clicks on the password field */
