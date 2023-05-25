@@ -75,8 +75,9 @@
 			tableHeader.appendChild(newHeaderCell);
 			//const url = `https://api.github.com/repos/rebecca-123/${repoName}/commits?author=MAnn223`;
 		}
-        function fetchGitData(username, studentCell, commitsCell, lastupdateCell) {
+        function fetchGitData(username, studentCell, commitsCell, lastupdateCell, repoName) {
             const url = `https://api.github.com/users/${username}`;
+			const repoUrl = `https://api.github.com/repos/rebecca-123/${repoName}`
             // var tableBody = document.getElementById('students');
             // var numRows = tableBody.getElementsByTagName('tr');
             fetch(url)
