@@ -36,6 +36,8 @@
                 var userNameInput = document.getElementById("username");
                 //addToTable
                 var newRow = tableBody.insertRow();
+                var lastUpdateCell = newRow.insertCell();
+                lastUpdateCell.textContent = " ";
                 var studentNameCell = newRow.insertCell();
                 studentNameCell.textContent = " ";
                 var userNameCell = newRow.insertCell();
@@ -46,7 +48,7 @@
                 var fetchCommitsButton = document.createElement('button');
                 fetchCommitsButton.textContent = 'Fetch Data';
                 fetchCommitsButton.onclick = function() {
-                fetchTotalCommits(userNameInput.value, studentNameCell, totalCommitsCell);
+                fetchTotalCommits(userNameInput.value, studentNameCell, totalCommitsCell, lastUpdateCell);
                 };
                 buttonCell.appendChild(fetchCommitsButton);
                 //reset fields
@@ -56,7 +58,7 @@
                 // row.insertCell(1).innerHTML = userName.value;
                 // row.insertCell(2).innerHTML = 0;
         }
-        function fetchTotalCommits(username, studentCell, commitsCell) {
+        function fetchTotalCommits(username, studentCell, commitsCell, lastupdateCell) {
             const url = `https://api.github.com/users/${username}`;
             // var tableBody = document.getElementById('students');
             // var numRows = tableBody.getElementsByTagName('tr');
@@ -65,6 +67,7 @@
     .then(data => {
       commitsCell.textContent = data.public_repos;
       studentCell.textContent = data.name;
+    lastupdateCell.textContent = data.updated_at;
     })
     .catch(error => console.error(error));
         }
@@ -83,3 +86,6 @@
         </script>
     </body>
 </html>
+
+
+
