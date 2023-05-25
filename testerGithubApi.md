@@ -88,19 +88,20 @@
 				})
 				.catch(error => console.error(error));
 		const repoName = document.getElementById("repo").value;
-		const token = "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";
+		const token = "";
 		const headers = {
         Authorization: `Bearer ${token}`
         };
-		const repoUrl = `https://api.github.com/repos/rebecca-123/${repoName}`
+		const repoUrl = `https://api.github.com/repos/rebecca-123/${repoName}/commits?author=${username}`
 		if (repoName !== '') {		
 			fetch(repoUrl, { headers })
 			.then(response => response.json())
 			.then(repoData => {
-			const totalCommits = repoData.length; //endpoint returns all commits, loop through to get counter-increment
+			const totalCommits = repoData.length; //endpoint returns all commits, loop through 
+			const row = commitsCell.parentNode;
 			const commitsIndex = Array.from(commitsCell.parentNode.children).indexOf(commitsCell);
-		  const repoCommitsCell = commitsCell.parentNode.insertCell(commitsIndex + 1);
-			  repoCommitsCell.textContent = repoData.public_repos;
+		     const repoCommitsCell = commitsCell.parentNode.insertCell(commitsIndex + 1);
+			  repoCommitsCell.textContent = totalCommits;
 			})
 		.catch(error => console.error(error));
 					}
