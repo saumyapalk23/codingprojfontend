@@ -1,11 +1,11 @@
 <html>
 <style>
-            .bg-color{
-                background-color: #161666;
+            .h1{
+                color: #161666;
             }
             </style>
 <body>
-        <h1 class="bg-color text-center m-5">Team Profile</h1>
+        <h1 class="text-center m-5">Team Profile</h1>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
                 <h1>Big Team: Mr. R</h1>
