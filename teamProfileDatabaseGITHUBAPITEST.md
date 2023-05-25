@@ -37,10 +37,10 @@
                 var userNameInput = document.getElementById("username");
                 //addToTable
                 var newRow = tableBody.insertRow();
-                var lastUpdateCell = newRow.insertCell();
-                lastUpdateCell.textContent = " ";
                 var studentNameCell = newRow.insertCell();
                 studentNameCell.textContent = " ";
+                var lastUpdateCell = newRow.insertCell();
+                lastUpdateCell.textContent = " ";
                 var userNameCell = newRow.insertCell();
                 userNameCell.textContent = userNameInput.value;
                 var totalCommitsCell = newRow.insertCell();
