@@ -1,7 +1,10 @@
 <html>
 <head>
 <style>
-            body {
+        #table-container th {
+        color: white;
+    }
+      body {
             background-color: #01060d;
         }
             table {
@@ -12,12 +15,29 @@
             th, td {
                 padding: 20px;
                 text-align: center;
-                border: 20px solid green;
+                border: 20px solid blue;
             }
             h1, h2 {
                 color: #fff;
             }
-    </style>
+    input[type="text"] {
+        padding: 10px;
+        border: 2px solid blue;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 200px;
+        margin: 8px 5px;
+            }
+    button {
+        padding: 10px 20px;
+        background-color: #161666;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 8px 5px;    }
+</style>
     <body>
         <h1 class="text-center m-5">Team Profile</h1>
         <div class="table-responsive mx-5">
@@ -91,17 +111,5 @@
     })
     .catch(error => console.error(error));
         }
-            // const userName = ;
-            // fetch('test.json')
-            // .then(response => response.json())
-            // .then(data => {
-            //     let table = '<table><tr><th>Name</th><th>GitHub ID</th><th>Blog Link</th><th>GitHub Insights</th><th>GitHub Commits</th></tr>';
-            //     data[0].individuals.forEach((student) => {
-            //     table += <tr><td>${student.student}</td><td>${student['gh-id']}</td><td>${student.blog}</td><td>${student['gh-insights']}</td><td>${student['gh-commits']}</td></tr>;
-            //     });
-            //     table += '</table>';
-            //     document.getElementById('table-container').innerHTML = table;
-            // })
-            // .catch(error => console.error(error));
         </script>
     </body>
