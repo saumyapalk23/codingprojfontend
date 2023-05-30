@@ -3,6 +3,9 @@
         #table-container th {
         color: white;
     }
+    #table-container td {
+    color: white;
+}
         h1, h2, h3{
                 color: #fff;
             }
@@ -23,13 +26,6 @@
                         <th scope="col">Blog</th>
                         <th scope="col">Github Insights</th>
                         <th scope="col">Github Commits</th>
-                        <!-- a<th scope="col">Staff Advisor</th>
-                        <th scope="col">Meeting Time and Location</th>
-                        <th scope="col">Additional Info</th>
-                        <<th scope="col">Official Club?</th> -->
-                        <!-- Links -->
-                        <!-- <th scope="col">Meeting Minutes</th>
-                        <th scope="col">Reviews</th> -->
                     </tr>
                     <tr>
                         <td>Rohan Gaikwad</td>
