@@ -10,7 +10,7 @@
             th, td {
                 padding: 10px;
                 text-align: center;
-                border: 1px solid #161666;
+                border: 2px solid green;
             }
             h1, h2 {
                 color: #262682;
