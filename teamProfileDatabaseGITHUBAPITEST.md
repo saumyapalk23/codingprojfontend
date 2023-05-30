@@ -20,6 +20,9 @@
             h1, h2 {
                 color: #fff;
             }
+        .white-text {
+            color: white;
+        }
     input[type="text"] {
         padding: 10px;
         border: 2px solid blue;
@@ -37,6 +40,11 @@
         font-size: 16px;
         cursor: pointer;
         margin: 8px 5px;    }
+            .input-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 </style>
     <body>
         <h1 class="text-center m-5">Team Profile</h1>
@@ -60,6 +68,7 @@
             </table>
         </div>
         <div>
+        <div class="input-container">
             <!--<input type="text" id="name" placeholder="Full Name">-->
             <input type="text" id="username" placeholder="GitHub Username">
             <button onclick="addStudent()">Add Student</button>
