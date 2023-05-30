@@ -12,7 +12,7 @@
                 <h2>Period 2</h2>
                 <thead>
                     <tr>
-                        <th scope="col">Student Name</th>
+                        <th scope="col">Student Name </th>
                         <th scope="col">Github ID</th>
                         <th scope="col">Blog</th>
                         <th scope="col">Github Insights</th>
