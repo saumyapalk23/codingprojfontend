@@ -63,7 +63,7 @@
           <a class="nav-link text-white fs-6" href="{{ site.baseurl }}/login">LOGIN</a>
         </li>
       </ul>
-      <a class="btn btn-outline-success text-nowrap fs-6" href="{{ site.baseurl }}/search">SEARCH TEAMS</a>
+      <a class="btn btn-outline-primary text-nowrap fs-6" href="{{ site.baseurl }}/search">SEARCH TEAMS</a>
     </div>
   </div>
 </nav>
@@ -101,7 +101,7 @@
               console.log(data.name);
               club = data.name;
               // display club name, profile, logout button
-              state.innerHTML ='<img src="./assets/images/rename-user.png" width="40px" height="40px" class="d-inline-block align-text-middle"><div class="btn-group"><button id="club-name" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Placeholder</button><ul class="dropdown-menu"><li><a class="dropdown-item" href="{{ site.baseurl }}/profile">Profile</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="{{ site.baseurl }}/delete">Account</a></li><li><a class="dropdown-item" href="#">Logout</a></li></ul></div>';
+              state.innerHTML ='<img src="./assets/images/rename-user.png" width="40px" height="40px" class="d-inline-block align-text-middle"><div class="btn-group"><button id="club-name" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Placeholder</button><ul class="dropdown-menu"><li><a class="dropdown-item" href="{{ site.baseurl }}/profile">Profile</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="{{ site.baseurl }}/delete">Account</a></li><li><a class="dropdown-item" href="#">Logout</a></li></ul></div>';
               const cn = document.getElementById("club-name");
               cn.innerHTML = club;
             })
@@ -111,7 +111,7 @@
       else{ // cannot access protected page /hello
         console.log("Not logged in");
         // login button
-        state.innerHTML = '<a class="btn btn-success" href="{{ site.baseurl }}/login">LOG IN</a>';
+        state.innerHTML = '<a class="btn btn-primary" href="{{ site.baseurl }}/login">LOG IN</a>';
       }
     })
   }

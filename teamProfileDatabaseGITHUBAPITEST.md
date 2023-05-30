@@ -29,7 +29,8 @@
         border-radius: 5px;
         font-size: 16px;
         width: 200px;
-        right: 600px;
+        margin-left: auto;
+        margin-right: 0;
     }
     button {
         padding: 10px 20px;
@@ -39,7 +40,8 @@
         border-radius: 5px;
         font-size: 16px;
         cursor: pointer;
-        right: 300px;
+        margin-left: auto;
+        margin-right: 0;
     }
 </style>
     <body>
