@@ -20,6 +20,26 @@
     </style>
     <body>
         <h1 class="text-center m-5">Team Profile</h1>
+        <div class="table-responsive mx-5">
+            <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
+                <h1>Big Team: Mr. R</h1>
+                <h2>Period 2</h2>
+                <thead>
+                    <tr>
+                        <th scope="col"> Student Name </th>
+                        <th scope="col"> Last Github Update </th>
+                        <th scope="col"> Github ID </th>
+                        <!-- <th scope="col">Blog</th>
+                        <th scope="col">Github Insights</th> -->
+                        <th scope="col"> Number of Public Repos </th>
+                        <!--<td id="username-commits"></td>-->
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider" id="students">
+                </tbody>
+            </table>
+        </div>
+        <div>
             <!--<input type="text" id="name" placeholder="Full Name">-->
             <input type="text" id="username" placeholder="GitHub Username">
             <button onclick="addStudent()">Add Student</button>
@@ -84,23 +104,4 @@
             // })
             // .catch(error => console.error(error));
         </script>
-                <div class="table-responsive mx-5">
-            <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
-                <h1>Big Team: Mr. R</h1>
-                <h2>Period 2</h2>
-                <thead>
-                    <tr>
-                        <th scope="col"> Student Name </th>
-                        <th scope="col"> Last Github Update </th>
-                        <th scope="col"> Github ID </th>
-                        <!-- <th scope="col">Blog</th>
-                        <th scope="col">Github Insights</th> -->
-                        <th scope="col"> Number of Public Repos </th>
-                        <!--<td id="username-commits"></td>-->
-                    </tr>
-                </thead>
-                <tbody class="table-group-divider" id="students">
-                </tbody>
-            </table>
-        </div>
-        <div>
+    </body>
