@@ -9,7 +9,12 @@
 
     .button {
       font-size: 18px;
-      padding: 5px 10px;
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
     }
   </style>
 </head>
@@ -20,7 +25,7 @@
   <button class="button" onclick="resetTimer()">Reset</button>
 
   <script>
-    var timerInterval;
+  var timerInterval;
     var startTime;
     var elapsedTime = 0;
 
@@ -56,7 +61,6 @@
       var formattedSeconds = seconds.toString().padStart(2, '0');
 
       return formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
-    }
-  </script>
+    }  </script>
 </body>
 </html>
