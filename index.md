@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <head>
     <title>Photo Carousel</title>
 </head>
@@ -6,12 +5,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #333;
+            background-color: #01060d;
             color: #fff;
         }
-        .carousel-item img {
-            filter: invert(100%);
-        }
+       
     </style>
 
 <body>
