@@ -27,6 +27,7 @@
         font-size: 16px;
         width: 200px;
         position: center;
+        right: 300px;
     }
     button {
         padding: 10px 20px;
