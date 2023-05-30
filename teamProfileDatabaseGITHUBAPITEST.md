@@ -3,7 +3,6 @@
 <style>
             body {
             background-color: #01060d;
-            color: #fff;
         }
             table {
                 border-collapse: collapse;
