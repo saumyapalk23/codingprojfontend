@@ -1,7 +1,10 @@
 <html>
 <head>
 <style>
-            body {
+        #table-container th {
+        color: white;
+    }
+      body {
             background-color: #01060d;
         }
             table {
