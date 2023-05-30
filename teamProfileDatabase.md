@@ -3,7 +3,11 @@
             .h1{
                 color: #24247a;
             }
-            </style>
+       body {
+            background-color: #01060d;
+            color: #fff;
+        }
+                    </style>
 <body>
         <h1 class="text-center m-5">Team Profile</h1>
         <div class="table-responsive mx-5">
