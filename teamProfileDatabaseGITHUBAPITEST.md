@@ -87,12 +87,16 @@
                 var newRow = tableBody.insertRow();
                 var studentNameCell = newRow.insertCell();
                 studentNameCell.textContent = " ";
+                studentNameCell.classList.add("white-text");
                 var lastUpdateCell = newRow.insertCell();
                 lastUpdateCell.textContent = " ";
+                lastUpdateCell.classList.add("white-text");
                 var userNameCell = newRow.insertCell();
                 userNameCell.textContent = userNameInput.value;
+                userNameCell.classList.add("white-text");
                 var totalCommitsCell = newRow.insertCell();
                 totalCommitsCell.textContext = 0;
+                totalCommitsCell.classList.add("white-text");
                 var buttonCell = newRow.insertCell();
                 var fetchCommitsButton = document.createElement('button');
                 fetchCommitsButton.textContent = 'Fetch Data';
@@ -115,8 +119,11 @@
     .then(response => response.json())
     .then(data => {
       commitsCell.textContent = data.public_repos;
+                                commitsCell.classList.add("white-text");
       studentCell.textContent = data.name;
+                                studentCell.classList.add("white-text");
     lastupdateCell.textContent = data.updated_at;
+                            lastupdateCell.classList.add("white-text");
     })
     .catch(error => console.error(error));
         }
