@@ -40,10 +40,6 @@
                 </thead>
                 <tbody class="table-group-divider" id="students">
                 </tbody>
-            <!--<input type="text" id="name" placeholder="Full Name">-->
-            <input type="text" id="username" placeholder="GitHub Username">
-            <button onclick="addStudent()">Add Student</button>
-            <!--<button onclick="fetchTotalCommits()">Fetch Total Commits</button> -->
         </div>
         <script>
             function addStudent() {
@@ -104,7 +100,8 @@
             // })
             // .catch(error => console.error(error));
         </script>
-    </body>
+            <!--<input type="text" id="name" placeholder="Full Name">-->
+            <input type="text" id="username" placeholder="GitHub Username">
+            <button onclick="addStudent()">Add Student</button>
+            <!--<button onclick="fetchTotalCommits()">Fetch Total Commits</button> -->
    </table>
-        </div>
-        <div>
