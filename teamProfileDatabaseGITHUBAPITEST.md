@@ -16,7 +16,7 @@
                 border: 20px solid green;
             }
             h1, h2 {
-                color: #262682;
+                color: #fff;
             }
     </style>
     <body>
