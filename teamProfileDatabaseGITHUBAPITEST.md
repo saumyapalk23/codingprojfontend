@@ -20,6 +20,9 @@
             h1, h2 {
                 color: #fff;
             }
+        .white-text {
+            color: white;
+        }
     input[type="text"] {
         padding: 10px;
         border: 2px solid blue;
@@ -68,23 +71,22 @@
         </div>
         <script>
             function addStudent() {
-                // const tableBody = document.getElementById('students');
-                // const username = document.getElementById('username').value;
-                // const newRow = document.createElement('tr');
-                // const nameCell = document.createElement('td');
                 var tableBody = document.getElementById('students');
-                // var nameInput = document.getElementById("name");
                 var userNameInput = document.getElementById("username");
                 //addToTable
                 var newRow = tableBody.insertRow();
                 var studentNameCell = newRow.insertCell();
                 studentNameCell.textContent = " ";
+                studentNameCell.classList.add("white-text");
                 var lastUpdateCell = newRow.insertCell();
                 lastUpdateCell.textContent = " ";
+                lastUpdateCell.classList.add("white-text");
                 var userNameCell = newRow.insertCell();
                 userNameCell.textContent = userNameInput.value;
+                userNameCell.classList.add("white-text");
                 var totalCommitsCell = newRow.insertCell();
                 totalCommitsCell.textContext = 0;
+                totalCommitsCell.classList.add("white-text");
                 var buttonCell = newRow.insertCell();
                 var fetchCommitsButton = document.createElement('button');
                 fetchCommitsButton.textContent = 'Fetch Data';
@@ -92,37 +94,21 @@
                 fetchTotalCommits(userNameInput.value, studentNameCell, totalCommitsCell, lastUpdateCell);
                 };
                 buttonCell.appendChild(fetchCommitsButton);
-                //reset fields
-                //nameInput.value = '';
                 usernameInput.value = '';
-                // row.insertCell(0).innerHTML = name.value;
-                // row.insertCell(1).innerHTML = userName.value;
-                // row.insertCell(2).innerHTML = 0;
         }
         function fetchTotalCommits(username, studentCell, commitsCell, lastupdateCell) {
             const url = `https://api.github.com/users/${username}`;
-            // var tableBody = document.getElementById('students');
-            // var numRows = tableBody.getElementsByTagName('tr');
             fetch(url)
     .then(response => response.json())
     .then(data => {
       commitsCell.textContent = data.public_repos;
+                          commitsCell.classList.add("white-text");
       studentCell.textContent = data.name;
+                          studentCell.classList.add("white-text");
     lastupdateCell.textContent = data.updated_at;
+                        lastupdateCell.classList.add("white-text");
     })
     .catch(error => console.error(error));
         }
-            // const userName = ;
-            // fetch('test.json')
-            // .then(response => response.json())
-            // .then(data => {
-            //     let table = '<table><tr><th>Name</th><th>GitHub ID</th><th>Blog Link</th><th>GitHub Insights</th><th>GitHub Commits</th></tr>';
-            //     data[0].individuals.forEach((student) => {
-            //     table += <tr><td>${student.student}</td><td>${student['gh-id']}</td><td>${student.blog}</td><td>${student['gh-insights']}</td><td>${student['gh-commits']}</td></tr>;
-            //     });
-            //     table += '</table>';
-            //     document.getElementById('table-container').innerHTML = table;
-            // })
-            // .catch(error => console.error(error));
         </script>
     </body>
