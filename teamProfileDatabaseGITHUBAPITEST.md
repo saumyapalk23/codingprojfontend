@@ -23,18 +23,12 @@
         .white-text {
             color: white;
         }
-    .input-container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
     input[type="text"] {
         padding: 10px;
         border: 2px solid blue;
         border-radius: 5px;
         font-size: 16px;
         width: 200px;
-        margin: 8px 5px;
         }
     button {
         padding: 10px 20px;
@@ -44,7 +38,8 @@
         border-radius: 5px;
         font-size: 16px;
         cursor: pointer;
-        margin: 8px 5px;
+        margin-left: auto;
+        margin-right: 0;
     }
 </style>
     <body>
@@ -69,9 +64,8 @@
             </table>
         </div>
         <div> 
-        <div class="input-container">
             <!--<input type="text" id="name" placeholder="Full Name">-->
-            <input type="text" class="username" placeholder="Input GitHub Username">
+            <input type="text" class="username" placeholder="GitHub Username">
             <button onclick="addStudent()">Add Student</button>
             <!--<button onclick="fetchTotalCommits()">Fetch Total Commits</button> -->
         </div>
@@ -117,3 +111,4 @@
     .catch(error => console.error(error));
         }
         </script>
+    </body>
