@@ -25,6 +25,7 @@
         border: 2px solid blue;
         border-radius: 5px;
         font-size: 16px;
+        width: 20px;
     }
     button {
         padding: 10px 20px;
