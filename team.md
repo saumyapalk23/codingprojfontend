@@ -16,7 +16,7 @@
 </style>
         <h1 class="text-center m-5">Scrum Teams</h1>
         <div class="table-responsive mx-5">
-            <table class="table table-hover table-bordered border-secondary mb-5">
+            <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
