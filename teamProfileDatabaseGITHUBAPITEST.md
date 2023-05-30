@@ -29,7 +29,7 @@
         border-radius: 5px;
         font-size: 16px;
         width: 200px;
-        right: 300px;
+        right: 600px;
     }
     button {
         padding: 10px 20px;
@@ -39,6 +39,7 @@
         border-radius: 5px;
         font-size: 16px;
         cursor: pointer;
+        right: 300px;
     }
 </style>
     <body>
@@ -64,7 +65,7 @@
         </div>
         <div> 
             <!--<input type="text" id="name" placeholder="Full Name">-->
-            <input type="text" id="username" placeholder="GitHub Username">
+            <input type="text" class="username" placeholder="GitHub Username">
             <button onclick="addStudent()">Add Student</button>
             <!--<button onclick="fetchTotalCommits()">Fetch Total Commits</button> -->
         </div>
