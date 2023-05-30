@@ -5,14 +5,26 @@
       font-size: 24px;
       margin-bottom: 10px;
     }
-      body{
-        background-color: #01060d;
-      }
-
-    
-
+                      body {
+            background-color: #01060d;
+        }
+    .button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
   </style>
-
+</head>
+<body>
+  <div class="timer">00:00:00</div>
+  <button class="button" onclick="startTimer()">Start</button>
+  <button class="button" onclick="stopTimer()">Stop</button>
+  <button class="button" onclick="resetTimer()">Reset</button>
+  <p id="time"></p>
 
   <script>
    

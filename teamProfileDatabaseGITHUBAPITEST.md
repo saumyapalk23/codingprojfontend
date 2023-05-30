@@ -2,7 +2,7 @@
 <head>
 <style>
         #table-container th {
-        color: blue;
+        color: white;
     }
       body {
             background-color: #01060d;
