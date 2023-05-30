@@ -29,7 +29,6 @@
         border-radius: 5px;
         font-size: 16px;
         width: 200px;
-        position: center;
         right: 300px;
     }
     button {
