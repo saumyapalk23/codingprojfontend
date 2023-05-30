@@ -22,10 +22,11 @@
   <button class="button" onclick="startTimer()">Start</button>
   <button class="button" onclick="stopTimer()">Stop</button>
   <button class="button" onclick="resetTimer()">Reset</button>
+  <p id="time"></p>
 
   <script>
-    '''
-  var timerInterval;
+   
+    var timerInterval;
     var startTime;
     var elapsedTime = 0;
 
@@ -59,10 +60,10 @@
       var formattedHours = hours.toString().padStart(2, '0');
       var formattedMinutes = minutes.toString().padStart(2, '0');
       var formattedSeconds = seconds.toString().padStart(2, '0');
-
-      return formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
+      document.getElementById("time").innerHTML = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
+       
     }  
-    '''
+
     </script>
 </body> 
 </html>
