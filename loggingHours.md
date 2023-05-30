@@ -25,6 +25,7 @@
   <button class="button" onclick="resetTimer()">Reset</button>
 
   <script>
+    '''
   var timerInterval;
     var startTime;
     var elapsedTime = 0;
@@ -61,6 +62,8 @@
       var formattedSeconds = seconds.toString().padStart(2, '0');
 
       return formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
-    }  </script>
+    }  
+    '''
+    </script>
 </body>
 </html>
