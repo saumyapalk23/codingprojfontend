@@ -8,7 +8,6 @@
             background-color: #01060d;
             color: #fff;
         }
-       
     </style>
 
 <body>
