@@ -4,6 +4,9 @@
                 h1 {
                 color: #262682;
             }
+                  body {
+            background-color: #01060d;
+        }
 </style>
         <h1 class="text-center m-5">Scrum Teams</h1>
         <div class="table-responsive mx-5">
