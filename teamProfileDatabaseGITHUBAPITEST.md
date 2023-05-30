@@ -29,12 +29,10 @@
         border-radius: 5px;
         font-size: 16px;
         width: 200px;
-        margin-left: auto;
-        margin-right: 0;
-    }
+        }
     button {
         padding: 10px 20px;
-        background-color: blue;
+        background-color: #161666;
         color: white;
         border: none;
         border-radius: 5px;
