@@ -1,10 +1,11 @@
 <html>
 <head>
 <style>
-      <style>
-            body {
+        #table-container th {
+        color: white;
+    }
+      body {
             background-color: #01060d;
-            color: #fff;
         }
             table {
                 border-collapse: collapse;
@@ -17,7 +18,7 @@
                 border: 20px solid green;
             }
             h1, h2 {
-                color: #262682;
+                color: #fff;
             }
     </style>
     <body>
