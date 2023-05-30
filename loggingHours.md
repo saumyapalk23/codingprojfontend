@@ -40,9 +40,7 @@
     }
 
     function resetTimer() {
-      clearInterval(timerInterval);
-      elapsedTime = 0;
-      updateTimer();
+      location.reload();
     }
 
     function updateTimer() {
@@ -61,7 +59,7 @@
       var formattedMinutes = minutes.toString().padStart(2, '0');
       var formattedSeconds = seconds.toString().padStart(2, '0');
       document.getElementById("time").innerHTML = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
-       
+      return = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
     }  
 
     </script>
