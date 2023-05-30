@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <head>
     <title>Photo Carousel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 </head>
 <body>
-<style>
-            .h1, h3{
-                color: #262682;
-            }
-            </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+        }
+        .carousel-item img {
+            filter: invert(100%);
+        }
+    </style>
+
 <body>
     <h1 class="text-center m-5">RMR Class Management Tool!</h1>
     <h3 class="text-center m-5">Made by AP CSA Class of '22-'23</h3>
