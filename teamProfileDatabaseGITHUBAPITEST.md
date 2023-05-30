@@ -71,7 +71,7 @@
         <div> 
         <div class="input-container">
             <!--<input type="text" id="name" placeholder="Full Name">-->
-            <input type="text" class="username" placeholder="GitHub Username">
+            <input type="text" class="username" placeholder="Input GitHub Username">
             <button onclick="addStudent()">Add Student</button>
             <!--<button onclick="fetchTotalCommits()">Fetch Total Commits</button> -->
         </div>
