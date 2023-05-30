@@ -5,7 +5,9 @@
       font-size: 24px;
       margin-bottom: 10px;
     }
-
+                      body {
+            background-color: #01060d;
+        }
     .button {
       font-size: 18px;
       padding: 10px 20px;
