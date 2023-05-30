@@ -4,13 +4,13 @@
       <style>
             table {
                 border-collapse: collapse;
-                border-radius: 10px;
+                border-radius: 20px;
                 overflow: hidden;
             }
             th, td {
-                padding: 10px;
+                padding: 20px;
                 text-align: center;
-                border: 2px solid green;
+                border: 20px solid green;
             }
             h1, h2 {
                 color: #262682;
