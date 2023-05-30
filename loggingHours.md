@@ -5,7 +5,9 @@
       font-size: 24px;
       margin-bottom: 10px;
     }
-
+      body{
+        background-color: #01060d;
+      }
     .button {
       font-size: 18px;
       padding: 10px 20px;
@@ -34,7 +36,6 @@
     var temp = 10;
 
     function startTimer() {
-      
       if(temp >9){
         startTime = Date.now() - elapsedTime;
         timerInterval = setInterval(updateTimer, 10);

@@ -40,9 +40,6 @@
                 </thead>
                 <tbody class="table-group-divider" id="students">
                 </tbody>
-            </table>
-        </div>
-        <div>
             <!--<input type="text" id="name" placeholder="Full Name">-->
             <input type="text" id="username" placeholder="GitHub Username">
             <button onclick="addStudent()">Add Student</button>
@@ -108,3 +105,6 @@
             // .catch(error => console.error(error));
         </script>
     </body>
+   </table>
+        </div>
+        <div>
