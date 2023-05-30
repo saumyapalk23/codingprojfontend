@@ -1,5 +1,8 @@
 <html>
 <style>
+        #table-container th {
+        color: white;
+    }
         h1, h2, h3{
                 color: #fff;
             }
