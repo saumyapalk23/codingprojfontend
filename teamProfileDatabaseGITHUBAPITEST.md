@@ -20,7 +20,22 @@
             h1, h2 {
                 color: #fff;
             }
-    </style>
+    input[type="text"] {
+        padding: 10px;
+        border: 2px solid blue;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
     <body>
         <h1 class="text-center m-5">Team Profile</h1>
         <div class="table-responsive mx-5">
