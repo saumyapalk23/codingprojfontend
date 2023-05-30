@@ -1,6 +1,6 @@
 <html>
 <style>
-            .h1{
+        .h1{
                 color: #24247a;
             }
        body {
