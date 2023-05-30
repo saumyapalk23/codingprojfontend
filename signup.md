@@ -1,6 +1,9 @@
 <html>
     <head>
         <style>
+        body {
+            background-color: #01060d;
+        }
             .bg-color{
                 background-color: #161666;
             }
