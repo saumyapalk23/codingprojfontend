@@ -15,7 +15,7 @@
             th, td {
                 padding: 20px;
                 text-align: center;
-                border: 20px solid green;
+                border: 20px solid blue;
             }
             h1, h2 {
                 color: #fff;
