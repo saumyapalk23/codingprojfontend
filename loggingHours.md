@@ -5,9 +5,7 @@
       font-size: 24px;
       margin-bottom: 10px;
     }
-                      body {
-            background-color: #01060d;
-        }
+
     .button {
       font-size: 18px;
       padding: 10px 20px;
@@ -17,13 +15,15 @@
       border-radius: 5px;
       margin-right: 10px;
     }
+
   </style>
 </head>
 <body>
-  <div class="timer">00:00:00</div>
+  
   <button class="button" onclick="startTimer()">Start</button>
   <button class="button" onclick="stopTimer()">Stop</button>
   <button class="button" onclick="resetTimer()">Reset</button>
+  <div class="timer">00:00:00</div>
   <p id="time"></p>
 
   <script>
@@ -31,20 +31,25 @@
     var timerInterval;
     var startTime;
     var elapsedTime = 0;
+    var temp = 10;
 
     function startTimer() {
-      startTime = Date.now() - elapsedTime;
-      timerInterval = setInterval(updateTimer, 10);
+      
+      if(temp >9){
+        startTime = Date.now() - elapsedTime;
+        timerInterval = setInterval(updateTimer, 10);
+      }
+
     }
 
     function stopTimer() {
+      temp = 9;
       clearInterval(timerInterval);
+  
     }
 
     function resetTimer() {
-      clearInterval(timerInterval);
-      elapsedTime = 0;
-      updateTimer();
+      location.reload();
     }
 
     function updateTimer() {
@@ -63,7 +68,7 @@
       var formattedMinutes = minutes.toString().padStart(2, '0');
       var formattedSeconds = seconds.toString().padStart(2, '0');
       document.getElementById("time").innerHTML = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
-       
+      return = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
     }  
 
     </script>
