@@ -1,6 +1,6 @@
 <html>
 <style>
-        .h1{
+        h1, h2, h3{
                 color: #fff;
             }
        body {
@@ -16,6 +16,7 @@
                 <h2>Period 2</h2>
                 <thead>
                     <tr>
+                    <h3>
                         <th scope="col">Student Name </th>
                         <th scope="col">Github ID</th>
                         <th scope="col">Blog</th>
@@ -43,6 +44,7 @@
                         <td>32</td>
                         <td>198</td>
                     </tr>
+              </h3>
                 </thead>
                 <tbody class="table-group-divider" id="clubs">
                 </tbody>
