@@ -62,7 +62,7 @@
                 </tbody>
             </table>
         </div>
-        <div>
+        <div> 
             <!--<input type="text" id="name" placeholder="Full Name">-->
             <input type="text" id="username" placeholder="GitHub Username">
             <button onclick="addStudent()">Add Student</button>
