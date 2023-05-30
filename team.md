@@ -7,6 +7,12 @@
                   body {
             background-color: #01060d;
         }
+                #table-container th {
+        color: white;
+    }
+    #table-container td {
+    color: white;
+}
 </style>
         <h1 class="text-center m-5">Scrum Teams</h1>
         <div class="table-responsive mx-5">
