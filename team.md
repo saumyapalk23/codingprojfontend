@@ -72,7 +72,7 @@
                         bigteam.innerHTML = row.bigteam;
                         period.innerHTML = row.period;
                         var profile_str = "{{ site.baseurl }}/teamProfileDatabase?id=" + row.id;
-                        profile.innerHTML = '<a href="' + assignments_str +'">' + "profile for " + row.bigteam + '</a>';
+                        profile.innerHTML = '<a href="' + profile_str +'">' + "profile for " + row.bigteam + '</a>';
                         // add all columns to the row
                         tr.appendChild(id);
                         tr.appendChild(period);
