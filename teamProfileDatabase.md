@@ -133,18 +133,22 @@
                 const githubId = document.getElementById('github-id').value;
                 const profileLink = document.getElementById('profile-link').value;
                 const user = {
-                    name: name,
-                    githubId: githubId,
-                    profileLink: profileLink
+                    "name": name,
+                    "githubId": githubId,
+                    "profileLink": profileLink
                 };
                 const endpoint = `https://mrr.rebeccaaa.tk/api/team/addMember/${teamId}`;
-                      fetch(endpoint, {
+                const options = {
                     method: 'POST',
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    credentials: 'include',
                     headers: {
-                    'Content-Type': 'application/json'
+                        'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(user)
-                })
+                    body: JSON.stringify(data)
+                }
+                fetch(endpoint, options)
                     .then(response => response.json())
                     .then(data => {
                     console.log('User creation response:', data);
