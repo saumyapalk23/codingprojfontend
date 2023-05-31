@@ -2,14 +2,15 @@
 <head>
   <style>
     body {
-      display: flex;
+      /* display: flex; */
+      /* display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
+      margin: 0; */
       background-color: #01060d;
     }
-
     .button {
       font-size: 18px;
       padding: 10px 20px;
@@ -19,7 +20,6 @@
       border-radius: 5px;
       margin: 0 10px;
     }
-    
     .timer {
       font-size: 24px;
       margin-bottom: 10px;
@@ -43,7 +43,6 @@ var timerInterval;
 var startTime;
 var elapsedTime = 0;
 var isRunning = false;
-
 function startTimer() {
   if (!isRunning) {
     startTime = Date.now() - elapsedTime;
@@ -51,12 +50,10 @@ function startTimer() {
     isRunning = true;
   }
 }
-
 function stopTimer() {
   clearInterval(timerInterval);
   isRunning = false;
 }
-
 function resetTimer() {
   clearInterval(timerInterval);
   elapsedTime = 0;
@@ -64,19 +61,16 @@ function resetTimer() {
   isRunning = false;
   updateTimer();
 }
-
 function updateTimer() {
   var currentTime = Date.now();
   elapsedTime = currentTime - startTime;
   var formattedTime = formatTime(elapsedTime);
   document.querySelector('.timer').textContent = formattedTime;
 }
-
 function formatTime(milliseconds) {
   var hours = Math.floor(milliseconds / (1000 * 60 * 60));
   var minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
-
   var formattedHours = hours.toString().padStart(2, '0');
   var formattedMinutes = minutes.toString().padStart(2, '0');
   var formattedSeconds = seconds.toString().padStart(2, '0');

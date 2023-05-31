@@ -1,14 +1,20 @@
 <html>
     <head>
         <style>
+                body {    
+      background-color: #01060d;
+    }
+               .bg-color{
+                background-color: #161666;
+            }
             .btn-custom {
                 color: #fff;
-                background-color: #197e87;
+                background-color: #193387;
                 border-color: #ffffff;
             }
             .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open>.dropdown-toggle.btn-custom {
                 color: #fff;
-                background-color: #157347;
+                background-color: #193387;
                 border-color: #ffffff;
             }
         </style>
@@ -46,8 +52,8 @@
         </script>
     </head>
     <body>
-        <div class="bg-success w-50 mx-auto m-5">
-            <h2 class="text-light mx-5 pt-5">Profile</h2>
+        <div class="bg-color w-50 mx-auto m-5">
+            <h2 class="text-light mx-5 pt-5">PROFILE</h2>
             <!-- 'email' is mapped to 'username' for Spring Security -->
             <div class="mb-3 px-5">
                 <label class="form-label" for="username">EMAIL</label>
@@ -65,7 +71,7 @@
                 <label class="form-label" for="period">PERIOD</label>
                 <p id="period"></p>
             </div>
-            <a class="btn btn-custom text-nowrap text-light my-3 mx-5 mb-4" type="submit" href="{{ site.baseurl }}/update">Update Profile</a>
+            <a class="btn btn-custom text-nowrap text-light my-3 mx-5" type="submit" href="{{ site.baseurl }}/update">Update Profile</a>
         </div>  
         <script>
             const storedData = JSON.parse(localStorage.getItem('ID'));
