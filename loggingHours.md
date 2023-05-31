@@ -2,13 +2,14 @@
 <head>
   <style>
     body {
-      /* display: flex;
+      display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0; */
+      margin: 0;
       background-color: #01060d;
     }
+
     .button {
       font-size: 18px;
       padding: 10px 20px;
@@ -18,6 +19,7 @@
       border-radius: 5px;
       margin: 0 10px;
     }
+    
     .timer {
       font-size: 24px;
       margin-bottom: 10px;
