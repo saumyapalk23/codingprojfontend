@@ -32,7 +32,9 @@
   <div class="text-center m-5 timer">00:00:00</div>
   <div class="button-container">
     <center> <button class="button" onclick="startTimer()">Start</button></center>
+    <br>
     <center><button class="button" onclick="stopTimer()">Stop</button></center>
+    <br>
     <center><button class="button" onclick="resetTimer()">Reset</button></center>
   </div>
   
