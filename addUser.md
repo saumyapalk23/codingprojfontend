@@ -24,7 +24,9 @@
             }       
         </style>
         <script>
-            const signup_url = "https://mrr.rebeccaaa.tk/api/team/addMember/43";
+            const urlParams = new URLSearchParams(window.location.search);
+            const teamId = urlParams.get('id');
+            const signup_url = `https://mrr.rebeccaaa.tk/api/team/addMember/${teamId}`;
             // const signup_url = "http://localhost:8023/api/team/post";
             function addUser(){
                 // get user input
