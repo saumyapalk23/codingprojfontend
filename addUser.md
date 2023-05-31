@@ -34,7 +34,7 @@
                 var ghid = document.getElementById("ghid").value;
                 var blog = document.getElementById("blog").value;
                 // store data in JavaScript object
-                let data = {"name": name, "ghid": ghid, "blog": blog};
+                let data = {"name": name, "githubId": ghid, "blog": blog};
                 console.log(data);
                 const options = {
                     method: 'POST',
