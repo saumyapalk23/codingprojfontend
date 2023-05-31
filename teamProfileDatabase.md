@@ -37,8 +37,8 @@
         }
                     </style>
     <body>
-        <h1 class="text-center m-5">Team Profile</h1>
-        <p><a id="addUserLink">Add a user to this team</a></p>
+        <h1 class="text-center m-5">Team Members</h1>
+        <p><a id="addUserLink">Add a member to this team</a></p>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
                 <thead>
@@ -51,16 +51,6 @@
                 <tbody class="table-group-divider" id="users">
                 </tbody>
             </table>
-        </div>
-        <div>
-            <h2 class="text-center m-5">ADD A USER TO THE TEAM</h2>
-        <div class="input-container">
-            <form id="create-user-form">
-                <input type="text" id="name" placeholder="Name" name="name" required>
-                <input type="text" id="github-id" placeholder="GitHub ID" name="githubId" required>
-                <input type="text" id="profile-link" placeholder="Profile Link" name="profileLink" required>
-                <button type="submit" onclick="addUser()">Create</button>
-            </form>
         </div>
         <script>
             const urlParams = new URLSearchParams(window.location.search);
