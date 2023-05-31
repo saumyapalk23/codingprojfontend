@@ -1,13 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
   <style>
-    .timer {
-      font-size: 24px;
-      margin-bottom: 10px;
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #01060d;
     }
-          body {
-            background-color: #01060d;
-        }
+    
     .button {
       font-size: 18px;
       padding: 10px 20px;
@@ -15,24 +18,28 @@
       color: white;
       border: none;
       border-radius: 5px;
-      margin-right: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 0 10px;
+    }
+    
+    .timer {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: white;
     }
   </style>
 </head>
 <body>
-    <h1 class="text-center m-5">Hours</h1>
-  <div class="text-center m-5">00:00:00</div>
-  <button class="button" onclick="startTimer()">Start</button>
-  <button class="button" onclick="stopTimer()">Stop</button>
-  <button class="button" onclick="resetTimer()">Reset</button>
+  <h1 class="text-center m-5">Hours</h1>
+  <div class="text-center m-5 timer">00:00:00</div>
+  <div class="button-container">
+    <button class="button" onclick="startTimer()">Start</button>
+    <button class="button" onclick="stopTimer()">Stop</button>
+    <button class="button" onclick="resetTimer()">Reset</button>
+  </div>
   <p id="time"></p>
 
   <script>
-   
-    var timerInterval;
+var timerInterval;
     var startTime;
     var elapsedTime = 0;
     var temp = 10;
@@ -73,20 +80,6 @@
       document.getElementById("time").innerHTML = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
       return = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
     }  
-
-    </script>
-</head>
-
-
-<body>
-<span>
-
-  <button onclick="startTimer()">Start</button>
-  <button onclick="stopTimer()">Stop</button>
-  <button onclick="resetTimer()">Reset</button>
-  <div class="timer">00:00:00</div>
-  <p id="time"></p>
-
-</span>  
-</body> 
+  </script>
+</body>
 </html>
