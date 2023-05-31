@@ -130,7 +130,6 @@
                     // Handle the response from the server
                     // You can perform further actions based on the response
                     })
-            }
-        </script>
+            }        </script>
     </body>
 </html>
