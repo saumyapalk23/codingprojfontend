@@ -36,8 +36,9 @@
             background-color: #01060d;
         }
                     </style>
-<body>
+    <body>
         <h1 class="text-center m-5">Team Profile</h1>
+        <p><a id="addUserLink">Add a user to this team</a></p>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
                 <thead>
@@ -64,6 +65,8 @@
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const teamId = urlParams.get('id');
+            var a = document.getElementById('addUserLink');
+            a.href = `https://rebecca-123.github.io/mrr_frontend/addUser?id=${teamId}`
             // prepare fetch urls
             const team_url = `https://mrr.rebeccaaa.tk/api/team/${teamId}`;
             const get_url = team_url + "/";
