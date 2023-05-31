@@ -94,7 +94,6 @@
                     console.log(data);
                     document.getElementById("bigteam").innerHTML = data.bigteam;
                     document.getElementById("email").innerHTML = data.email;
-                    document.getElementById("names").innerHTML = data.names;
                     document.getElementById("period").innerHTML = data.period;
                 })
             })
