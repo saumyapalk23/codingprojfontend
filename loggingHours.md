@@ -6,12 +6,12 @@
       margin-bottom: 10px;
     }
                       body {
-            background-color: #01060d;
+            background-color: ##161666;
         }
     .button {
       font-size: 18px;
       padding: 10px 20px;
-      background-color: green;
+      background-color: #161666;
       color: white;
       border: none;
       border-radius: 5px;
@@ -75,6 +75,7 @@
 
 
 <body>
+<span>
   
   <button onclick="startTimer()">Start</button>
   <button onclick="stopTimer()">Stop</button>
@@ -82,6 +83,6 @@
   <div class="timer">00:00:00</div>
   <p id="time"></p>
 
-  
+</span>  
 </body> 
 </html>
