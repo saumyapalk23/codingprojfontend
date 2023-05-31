@@ -11,7 +11,7 @@
     </style>
 
 <body>
-    <h1 class="text-center m-5">RMR Class Management Tool!</h1>
+    <h1 class="text-center m-5">RMR Class Management Tool</h1>
     <h3 class="text-center m-5">Made by AP CSA Class of '22-'23</h3>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
