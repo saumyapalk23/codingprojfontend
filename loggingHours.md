@@ -2,7 +2,7 @@
 <head>
   <style>
     body {
-      display: flex;
+      /* display: flex; */
       /* display: flex;
       justify-content: center;
       align-items: center;
@@ -14,6 +14,9 @@
     .button {
       font-size: 18px;
       padding: 10px 20px;
+      background-color: #161666;
+      color: white;
+      border: none;
       border-radius: 5px;
       margin: 0 10px;
     }
