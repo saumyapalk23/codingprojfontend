@@ -28,6 +28,18 @@
                 </tbody>
             </table>
         </div>
+        <div>
+            <h1>Add a user to the team</h1>
+            <form id="create-user-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="github-id">GitHub ID:</label>
+                <input type="text" id="github-id" name="githubId" required>
+                <label for="profile-link">Profile Link:</label>
+                <input type="url" id="profile-link" name="profileLink" required>
+                <button onclick="addUser()">Create</button>
+            </form>
+        </div>
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const teamId = urlParams.get('id');
@@ -92,6 +104,32 @@
                 td.innerHTML = err;
                 tr.appendChild(td);
                 teamContainer.appendChild(tr);
+            }
+            function addUser() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const teamId = urlParams.get('id');
+                const name = document.getElementById('name').value;
+                const githubId = document.getElementById('github-id').value;
+                const profileLink = document.getElementById('profile-link').value;
+                const user = {
+                    name: name,
+                    githubId: githubId,
+                    profileLink: profileLink
+                };
+                const endpoint = `https://mrr.rebeccaaa.tk/api/team/addMember/${teamId}`;
+                      fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                    console.log('User creation response:', data);
+                    // Handle the response from the server
+                    // You can perform further actions based on the response
+                    })
             }
         </script>
     </body>
