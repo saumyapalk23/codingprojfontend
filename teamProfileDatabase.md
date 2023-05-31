@@ -1,5 +1,27 @@
 <html>
 <style>
+        button {
+        padding: 10px 20px;
+        background-color: #161666;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 8px 5px;    }
+        input[type="text"] {
+        padding: 10px;
+        border: 2px solid blue;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 200px;
+        margin: 8px 5px;
+            }
+                .input-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
         #table-container th {
         color: white;
     }
@@ -30,13 +52,11 @@
         </div>
         <div>
             <h1>Add a user to the team</h1>
+        <div class="input-container">
             <form id="create-user-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="github-id">GitHub ID:</label>
-                <input type="text" id="github-id" name="githubId" required>
-                <label for="profile-link">Profile Link:</label>
-                <input type="text" id="profile-link" name="profileLink" required>
+                <input type="text" id="name" placeholder="Name" name="name" required>
+                <input type="text" id="github-id" placeholder="GitHub ID"> name="githubId" required>
+                <input type="text" id="profile-link" placeholder="Profile Linnk" name="profileLink" required>
                 <button onclick="addUser()">Create</button>
             </form>
         </div>
