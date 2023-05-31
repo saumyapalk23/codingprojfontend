@@ -17,23 +17,11 @@
         <h1 class="text-center m-5">Team Profile</h1>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
-                <h1>Big Team: Mr. R</h1>
-                <h2>Period 2</h2>
                 <thead>
                     <tr>
                         <th scope="col">Student Name </th>
                         <th scope="col">Github ID</th>
                         <th scope="col">Blog</th>
-                    </tr>
-                    <tr>
-                        <td>Rohan Gaikwad</td>
-                        <td>RohanG326</td>
-                        <td>link</td>
-                    </tr>
-                    <tr>
-                        <td>Shreya Ahuja</td>
-                        <td>shreya-ahujaa</td>
-                        <td>link</td>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider" id="clubs">
@@ -69,7 +57,8 @@
                 }
                 // valid response will have JSON data
                 response.json().then(data => {
-                    for (const user of data.names) {
+                    const users = data.names;
+                    for (const user of users) {
                         console.log(user);
                         // columns
                         const tr = document.createElement("tr");
