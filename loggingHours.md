@@ -6,14 +6,14 @@
       margin-bottom: 10px;
     }
                       body {
-            background-color: ##161666;
+            background-color: #01060d;
         }
     .button {
       font-size: 18px;
       padding: 10px 20px;
       background-color: #161666;
       color: white;
-      border: none;
+      border: none;s
       border-radius: 5px;
       margin-right: 10px;
     }
