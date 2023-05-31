@@ -22,9 +22,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Period</th>
                         <th scope="col">Big Team Name</th>
-                        <th scope="col">Scrum Team Members</th>
-                        <th scope="col">Assignments</th>
-                        <th scope="col">Grades</th>
+                        <th scope="col">Profile</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider" id="team">
@@ -67,22 +65,19 @@
                         const id = document.createElement("td");
                         const period = document.createElement("td");
                         const bigteam = document.createElement("td");
-                        const names = document.createElement("td");
                         // url containers
-                        const assignments = document.createElement("td");
+                        const profile = document.createElement("td");
                         // accessing JSON values
                         id.innerHTML = i;
                         bigteam.innerHTML = row.bigteam;
-                        names.innerHTML = row.names;
                         period.innerHTML = row.period;
-                        var assignments_str = "{{ site.baseurl }}/assignments?id=" + row.id;
-                        assignments.innerHTML = '<a href="' + assignments_str +'">' + "Assignments for " + row.name + '</a>';
+                        var profile_str = "{{ site.baseurl }}/teamProfileDatabase?id=" + row.id;
+                        profile.innerHTML = '<a href="' + profile_str +'">' + "profile for " + row.bigteam + '</a>';
                         // add all columns to the row
                         tr.appendChild(id);
                         tr.appendChild(period);
                         tr.appendChild(bigteam);
-                        tr.appendChild(names);
-                        tr.appendChild(assignments);
+                        tr.appendChild(profile);
                         // add row to table
                         teamContainer.appendChild(tr);
                         i++;

@@ -2,13 +2,13 @@
     <head>
         <style>
             .btn-custom {
-                background-color: #198754;
-                border-color: #ffffff;
+                background-color: #161666;
+                border-color: #161666;
             }
             .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open>.dropdown-toggle.btn-custom {
                 color: #fff;
-                background-color: #157347;
-                border-color: #ffffff;
+                background-color: #161666;
+                border-color: #161666;
             }
         </style>
     </head>

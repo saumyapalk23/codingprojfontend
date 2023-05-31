@@ -16,7 +16,7 @@
 </style>
 </head>
 
-<nav class="navbar mx-3 navbar-expand-lg bg-body-light border-top-1 border-bottom-1 border-start-0 border-end-0">
+<nav class="navbar mx-3 navbar-expand-lg bg-body-light border-top-1 border-primary border-bottom-1 border-start-0 border-end-0">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ site.baseurl }}/">
       <img src="./assets/images/rmrr.jpg" alt="Logo" width="5%" height="5%" class="d-inline-block align-text-middle mx-2">
@@ -24,37 +24,33 @@
     </a>
     <div id="state">
   </nav>
+</div>
 
-  <nav class="navbar mx-3 navbar-expand-lg bg-body-light border border-success border-top-1 border-bottom-1 border-start-0 border-end-0">
-    <div class="container-fluid">  
+<nav class="navbar mx-3 navbar-expand-lg bg-body-light border border-primary border-top-1 border-bottom-1 border-start-0 border-end-0">
+  <div class="container-fluid">
     <!-- Rest of the code remains the same -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarToggler2">
-      <ul class="navbar-nav me-auto mb-1 mb-lg-0">
-        <li class="nav-item">
+      <ul class="navbar-nav mx-auto mb-1 mb-lg-0" style="display: flex; justify-content: space-between; padding: 0 15px;">
+        <li class="nav-item" style="margin-right: 50px;">
           <a class="nav-link text-white fs-6" href="{{ site.baseurl }}/team">SCRUM TEAMS</a>
         </li>
-      </ul>
-      <ul class="navbar-nav me-auto mb-1 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link text-white fs-6"  href="{{ site.baseurl }}/teamProfileDatabase">TEAM PROFILES</a>
+        <li class="nav-item" style="margin-right: 50px;">
+          <a class="nav-link text-white fs-6" href="{{ site.baseurl }}/teamProfileDatabase">TEAM PROFILES</a>
         </li>
-      </ul>
-      <ul class="navbar-nav me-auto mb-1 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item" style="margin-right: 50px;">
           <a class="nav-link text-white fs-6" href="{{ site.baseurl }}/teamProfileDatabaseGITHUBAPITEST">GITHUB API</a>
         </li>
-              </ul>
-        <ul class="navbar-nav me-auto mb-1 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item" style="margin-right: 50px;">
           <a class="nav-link text-white fs-6" href="{{ site.baseurl }}/loggingHours">HOURS</a>
         </li>
       </ul>
+      <!--
       <ul class="navbar-nav me-auto mb-1 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link text-white fs-6"  href="{{ site.baseurl }}/signup">SIGN UP</a>
+          <a class="nav-link text-white fs-6" href="{{ site.baseurl }}/signup">SIGN UP</a>
         </li>
       </ul>
       <ul class="navbar-nav me-auto mb-1 mb-lg-0">
@@ -62,10 +58,11 @@
           <a class="nav-link text-white fs-6" href="{{ site.baseurl }}/login">LOGIN</a>
         </li>
       </ul>
-      <a class="btn btn-outline-success text-nowrap fs-6" href="{{ site.baseurl }}/search">SEARCH TEAMS</a>
+      -->
     </div>
   </div>
 </nav>
+
 
 <script>
   // const url = "http://localhost:8023/hello"
@@ -100,7 +97,7 @@
               console.log(data.name);
               club = data.name;
               // display club name, profile, logout button
-              state.innerHTML ='<img src="./assets/images/rename-user.png" width="40px" height="40px" class="d-inline-block align-text-middle"><div class="btn-group"><button id="club-name" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Placeholder</button><ul class="dropdown-menu"><li><a class="dropdown-item" href="{{ site.baseurl }}/profile">Profile</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="{{ site.baseurl }}/delete">Account</a></li><li><a class="dropdown-item" href="#">Logout</a></li></ul></div>';
+              state.innerHTML ='<img src="./assets/images/rename-user.png" width="40px" height="40px" class="d-inline-block align-text-middle"><div class="btn-group"><button id="club-name" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Placeholder</button><ul class="dropdown-menu"><li><a class="dropdown-item" href="{{ site.baseurl }}/profile">Profile</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="{{ site.baseurl }}/delete">Account</a></li><li><a class="dropdown-item" href="#">Logout</a></li></ul></div>';
               const cn = document.getElementById("club-name");
               cn.innerHTML = club;
             })
@@ -110,7 +107,8 @@
       else{ // cannot access protected page /hello
         console.log("Not logged in");
         // login button
-        state.innerHTML = '<a class="btn btn-success" href="{{ site.baseurl }}/login">LOG IN</a>';
+        state.innerHTML = '<a class="btn btn-primary" href="{{ site.baseurl }}/login">LOG IN</a>' + '   ' + 
+                          '<a class="btn btn-primary" href="{{ site.baseurl }}/signup">SIGN UP</a>';
       }
     })
   }
