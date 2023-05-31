@@ -31,12 +31,11 @@
   <h1 class="text-center m-5">Hours</h1>
   <div class="text-center m-5 timer">00:00:00</div>
   <div class="button-container">
-    <button class="button" onclick="startTimer()">Start</button>
-    <button class="button" onclick="stopTimer()">Stop</button>
-    <button class="button" onclick="resetTimer()">Reset</button>
+    <center> <button class="button" onclick="startTimer()">Start</button></center>
+    <center><button class="button" onclick="stopTimer()">Stop</button></center>
+    <center><button class="button" onclick="resetTimer()">Reset</button></center>
   </div>
-  <p id="time"></p>
-
+  
   <script>
 var timerInterval;
 var startTime;
@@ -79,7 +78,7 @@ function formatTime(milliseconds) {
   var formattedHours = hours.toString().padStart(2, '0');
   var formattedMinutes = minutes.toString().padStart(2, '0');
   var formattedSeconds = seconds.toString().padStart(2, '0');
-  document.getElementById("time").innerHTML = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
+  
   return formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
 }
   </script>
