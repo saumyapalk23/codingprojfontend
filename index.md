@@ -29,7 +29,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/images/dnhs.jpg" class="displayed d-block w-50" alt="Image 1">
+                <img src="assets/images/dnhs.jpg" class="displayed d-block w-100" alt="Image 1">
             </div>
             <div class="carousel-item">
                 <img src="assets/images/image2.jpg" class="displayed d-block w-50" alt="Image 2">
