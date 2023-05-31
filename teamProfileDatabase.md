@@ -30,6 +30,7 @@
 }
         h1, h2, h3{
                 color: #fff;
+                position: center;
             }
        body {
             background-color: #01060d;
@@ -51,12 +52,12 @@
             </table>
         </div>
         <div>
-            <h1>Add a user to the team</h1>
+            <h2>ADD A USER TO THE TEAM</h2>
         <div class="input-container">
             <form id="create-user-form">
                 <input type="text" id="name" placeholder="Name" name="name" required>
-                <input type="text" id="github-id" placeholder="GitHub ID"> name="githubId" required>
-                <input type="text" id="profile-link" placeholder="Profile Linnk" name="profileLink" required>
+                <input type="text" id="github-id" placeholder="GitHub ID" name="githubId" required>
+                <input type="text" id="profile-link" placeholder="Profile Link" name="profileLink" required>
                 <button onclick="addUser()">Create</button>
             </form>
         </div>
@@ -151,5 +152,3 @@
                     // You can perform further actions based on the response
                     })
             }        </script>
-    </body>
-</html>
