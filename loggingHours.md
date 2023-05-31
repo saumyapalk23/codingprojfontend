@@ -5,7 +5,7 @@
       font-size: 24px;
       margin-bottom: 10px;
     }
-                      body {
+          body {
             background-color: #01060d;
         }
     .button {
