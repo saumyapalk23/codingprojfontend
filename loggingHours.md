@@ -76,7 +76,8 @@
 
 <body>
 <span>
-  
+        <h1 class="text-center m-5">Hours</h1>
+
   <button onclick="startTimer()">Start</button>
   <button onclick="stopTimer()">Stop</button>
   <button onclick="resetTimer()">Reset</button>
