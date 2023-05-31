@@ -9,25 +9,8 @@
         background-color: #01060d;
       }
 
-    .button {
-      font-size: 18px;
-      padding: 10px 20px;
-      background-color: green;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      margin-right: 10px;
-    }
-
+    
   </style>
-</head>
-<body>
-  
-  <button class="button" onclick="startTimer()">Start</button>
-  <button class="button" onclick="stopTimer()">Stop</button>
-  <button class="button" onclick="resetTimer()">Reset</button>
-  <div class="timer">00:00:00</div>
-  <p id="time"></p>
 
   <script>
    
@@ -37,7 +20,6 @@
     var temp = 10;
 
     function startTimer() {
-      
       if(temp >9){
         startTime = Date.now() - elapsedTime;
         timerInterval = setInterval(updateTimer, 10);
@@ -75,5 +57,15 @@
     }  
 
     </script>
+</head>
+<body>
+  
+  <button  onclick="startTimer()">Start</button>
+  <button  onclick="stopTimer()">Stop</button>
+  <button class="button" onclick="resetTimer()">Reset</button>
+  <div class="timer">00:00:00</div>
+
+
+  
 </body> 
 </html>
