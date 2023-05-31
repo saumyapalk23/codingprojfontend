@@ -7,7 +7,12 @@
         body {
             background-color: #01060d;
             color: #fff;
+            align-items: center;
         }
+        img.displayed{
+            margin-left: auto;
+            margin-right: auto;
+            }
     </style>
 
 <body>
@@ -18,16 +23,28 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/images/dnhs.jpg" class="d-block w-100" alt="Image 1">
+                <img src="assets/images/dnhs.jpg" class="displayed d-block w-50" alt="Image 1">
             </div>
             <div class="carousel-item">
-                <img src="assets/images/image2.jpg" class="d-block w-100" alt="Image 2">
+                <img src="assets/images/image2.jpg" class="displayed d-block w-50" alt="Image 2">
             </div>
             <div class="carousel-item">
-                <img src="assets/images/image1.jpg" class="d-block w-100" alt="Image 3">
+                <img src="assets/images/teamptfive.jpg" class="displayed d-block w-50" alt="Image 3">
+            </div>
+             <div class="carousel-item">
+                <img src="assets/images/imgfive.jpg" class="displayed d-block w-50" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/image1.jpg" class="displayed d-block w-50" alt="Image 5">
+            </div>
+             <div class="carousel-item">
+                <img src="assets/images/imgsix.jpg" class="displayed d-block w-50" alt="Image 6">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
