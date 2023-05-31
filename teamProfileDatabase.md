@@ -52,7 +52,7 @@
             </table>
         </div>
         <div>
-            <h2>ADD A USER TO THE TEAM</h2>
+            <h2 class="text-center m-5">ADD A USER TO THE TEAM</h2>
         <div class="input-container">
             <form id="create-user-form">
                 <input type="text" id="name" placeholder="Name" name="name" required>
