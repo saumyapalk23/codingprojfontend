@@ -24,22 +24,16 @@
                         <th scope="col">Student Name </th>
                         <th scope="col">Github ID</th>
                         <th scope="col">Blog</th>
-                        <th scope="col">Github Insights</th>
-                        <th scope="col">Github Commits</th>
                     </tr>
                     <tr>
                         <td>Rohan Gaikwad</td>
                         <td>RohanG326</td>
                         <td>link</td>
-                        <td>30</td>
-                        <td>200</td>
                     </tr>
                     <tr>
                         <td>Shreya Ahuja</td>
                         <td>shreya-ahujaa</td>
                         <td>link</td>
-                        <td>32</td>
-                        <td>198</td>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider" id="clubs">
@@ -47,17 +41,69 @@
             </table>
         </div>
         <script>
-            fetch('test.json')
-            .then(response => response.json())
-            .then(data => {
-                let table = '<table><tr><th>Name</th><th>GitHub ID</th><th>Blog Link</th><th>GitHub Insights</th><th>GitHub Commits</th></tr>';
-                data[0].individuals.forEach((student) => {
-                table += <tr><td>${student.student}</td><td>${student['gh-id']}</td><td>${student.blog}</td><td>${student['gh-insights']}</td><td>${student['gh-commits']}</td></tr>;
-                });
-                table += '</table>';
-                document.getElementById('table-container').innerHTML = table;
+            const urlParams = new URLSearchParams(window.location.search);
+            const teamId = urlParams.get('id');
+            // prepare fetch urls
+            const team_url = `https://mrr.rebeccaaa.tk/api/team/${teamId}`;
+            const get_url = team_url + "/";
+            const teamContainer = document.getElementById("team");
+            // prepare fetch GET options
+            const options = {
+                method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                // mode: 'cors', // no-cors, *cors, same-origin
+                cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+                // credentials: 'same-origin', // include, same-origin, omit
+                headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+            };
+            // fetch the API
+            fetch(get_url, options)
+                // response is a RESTful "promise" on any successful fetch
+                .then(response => {
+                // check for response errors
+                if (response.status !== 200) {
+                    error('GET API response failure: ' + response.status);
+                    return;
+                }
+                // valid response will have JSON data
+                response.json().then(data => {
+                    for (const user of data.names) {
+                        console.log(user);
+                        // columns
+                        const tr = document.createElement("tr");
+                        const name = document.createElement("td");
+                        const ghid = document.createElement("td");
+                        const blog = document.createElement("td");
+                        // url containers
+                        // accessing JSON values
+                        name.innerHTML = user.name;
+                        ghid.innerHTML = user.githubId;
+                        blog.innerHTML = user.blog;
+                        tr.appendChild(name);
+                        tr.appendChild(ghid);
+                        tr.appendChild(blog);
+                        // add row to table
+                        teamContainer.appendChild(tr);
+                    }
+                })
             })
-            .catch(error => console.error(error));
+            // catch fetch errors (ie Nginx ACCESS to server blocked)
+            .catch(err => {
+                error(err + " " + get_url);
+            });
+            // Something went wrong with actions or responses
+            function error(err) {
+                // log as Error in console
+                console.error(err);
+                // append error to resultContainer
+                const tr = document.createElement("tr");
+                const td = document.createElement("td");
+                td.innerHTML = err;
+                tr.appendChild(td);
+                teamContainer.appendChild(tr);
+            }
         </script>
     </body>
 </html>
