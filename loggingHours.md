@@ -12,6 +12,15 @@
     
   </style>
 
+
+</head>
+<body>
+  
+  <button  onclick="startTimer()">Start</button>
+  <button  onclick="stopTimer()">Stop</button>
+  <button class="button" onclick="resetTimer()">Reset</button>
+  <div class="timer">00:00:00</div>
+
   <script>
    
     var timerInterval;
@@ -53,19 +62,10 @@
       var formattedMinutes = minutes.toString().padStart(2, '0');
       var formattedSeconds = seconds.toString().padStart(2, '0');
       document.getElementById("time").innerHTML = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
-      return = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
+      return  (formattedHours + ':' + formattedMinutes + ':' + formattedSeconds);
     }  
 
     </script>
-</head>
-<body>
-  
-  <button  onclick="startTimer()">Start</button>
-  <button  onclick="stopTimer()">Stop</button>
-  <button class="button" onclick="resetTimer()">Reset</button>
-  <div class="timer">00:00:00</div>
-
-
   
 </body> 
 </html>
