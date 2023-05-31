@@ -58,7 +58,7 @@
                 <input type="text" id="name" placeholder="Name" name="name" required>
                 <input type="text" id="github-id" placeholder="GitHub ID" name="githubId" required>
                 <input type="text" id="profile-link" placeholder="Profile Link" name="profileLink" required>
-                <button onclick="addUser()">Create</button>
+                <button type="submit" onclick="addUser()">Create</button>
             </form>
         </div>
         <script>
