@@ -24,7 +24,7 @@
                         <th scope="col">Blog</th>
                     </tr>
                 </thead>
-                <tbody class="table-group-divider" id="clubs">
+                <tbody class="table-group-divider" id="users">
                 </tbody>
             </table>
         </div>
@@ -34,7 +34,7 @@
             // prepare fetch urls
             const team_url = `https://mrr.rebeccaaa.tk/api/team/${teamId}`;
             const get_url = team_url + "/";
-            const teamContainer = document.getElementById("team");
+            const teamContainer = document.getElementById("users");
             // prepare fetch GET options
             const options = {
                 method: 'GET', // *GET, POST, PUT, DELETE, etc.
