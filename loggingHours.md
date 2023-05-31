@@ -13,9 +13,12 @@
       padding: 10px 20px;
       background-color: #161666;
       color: white;
-      border: none;s
+      border: none;
       border-radius: 5px;
       margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   </style>
 </head>
