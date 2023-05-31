@@ -1,6 +1,8 @@
 <html>
     <head>
         <style>
+             body {
+            background-color: #01060d;}
             .btn-custom {
                 color: #fff;
                 background-color: #198754;
