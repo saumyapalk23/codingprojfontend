@@ -133,9 +133,9 @@
                 const githubId = document.getElementById('github-id').value;
                 const profileLink = document.getElementById('profile-link').value;
                 const user = {
-                    name: name,
-                    githubId: githubId,
-                    profileLink: profileLink
+                    "name": name,
+                    "ghid": githubId,
+                    "profileLink": profileLink
                 };
                 const endpoint = `https://mrr.rebeccaaa.tk/api/team/addMember/${teamId}`;
                       fetch(endpoint, {
