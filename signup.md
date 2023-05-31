@@ -37,7 +37,7 @@
                 securePassword();
                 validatePassword();
                 // store data in JavaScript object
-                let data = {bigteam: bigteam, email: email, names: names, period: period, password: pwd};
+                let data = {"bigteam": bigteam, "email": email, "names": names, "period": period, "password": pwd};
                 console.log(data);
                 const options = {
                     method: 'POST',
@@ -59,7 +59,7 @@
                 // valid response
                 console.log(data);
                 // redirect on successful login
-                window.location.href = "{{ site.baseurl }}/clubs";
+                window.location.href = "{{ site.baseurl }}/team";
                 })
                 // catch fetch errors (ie Nginx ACCESS to server blocked)
                 .catch(err => {
