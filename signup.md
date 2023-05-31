@@ -24,8 +24,8 @@
             }       
         </style>
         <script>
-            // const signup_url = "https://mrr.rebeccaaa.tk/api/team/post";
-            const signup_url = "http://localhost:8023/api/team/post";
+            const signup_url = "https://mrr.rebeccaaa.tk/api/team/post";
+            // const signup_url = "http://localhost:8023/api/team/post";
             function signup(){
                 // get user input
                 var bigteam = document.getElementById("bigteam").value;
