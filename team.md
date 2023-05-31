@@ -75,8 +75,8 @@
                         period.innerHTML = row.period;
                         var profile_str = "{{ site.baseurl }}/teamProfileDatabase?id=" + row.id;
                         profile.innerHTML = '<a href="' + profile_str +'">' + "profile for " + row.bigteam + '</a>';
-                        var profile_str2 = "{{ site.baseurl }}/teamAssignmentDatabase?id=" + row.id;
-                        profile.innerHTML = '<a href="' + profile_str2 +'">' + "assignments for " + row.bigteam + '</a>';
+                        var assignment_str = "{{ site.baseurl }}/teamAssignmentDatabase?id=" + row.id;
+                        profile.innerHTML = '<a href="' + assignment_str +'">' + "assignments for " + row.bigteam + '</a>';
                         // add all columns to the row
                         // add all columns to the row
                         tr.appendChild(id);
