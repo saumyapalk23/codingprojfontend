@@ -20,7 +20,8 @@
   </style>
 </head>
 <body>
-  <div class="timer">00:00:00</div>
+    <h1 class="text-center m-5">Hours</h1>
+  <div class="text-center m-5">00:00:00</div>
   <button class="button" onclick="startTimer()">Start</button>
   <button class="button" onclick="stopTimer()">Stop</button>
   <button class="button" onclick="resetTimer()">Reset</button>
@@ -76,7 +77,6 @@
 
 <body>
 <span>
-        <h1 class="text-center m-5">Hours</h1>
 
   <button onclick="startTimer()">Start</button>
   <button onclick="stopTimer()">Stop</button>
