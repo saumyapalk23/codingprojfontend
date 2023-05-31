@@ -29,6 +29,8 @@
             const signup_url = `https://mrr.rebeccaaa.tk/api/team/addMember/${teamId}`;
             // const signup_url = "http://localhost:8023/api/team/post";
             function addUser(){
+                const urlParams = new URLSearchParams(window.location.search);
+                const teamId = urlParams.get('id');
                 // get user input
                 var name = document.getElementById("name").value;
                 var ghid = document.getElementById("ghid").value;
@@ -56,7 +58,7 @@
                 // valid response
                 console.log(data);
                 // redirect on successful login
-                window.location.href = "{{ site.baseurl }}/teamProfileDatabase?id=43";
+                window.location.href = `{{ site.baseurl }}/teamProfileDatabase?id=${teamId}`;
                 })
                 // catch fetch errors (ie Nginx ACCESS to server blocked)
                 .catch(err => {
