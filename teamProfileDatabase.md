@@ -105,7 +105,7 @@
                 tr.appendChild(td);
                 teamContainer.appendChild(tr);
             }
-            function addUser(e) {
+            function addUser() {
                 const urlParams = new URLSearchParams(window.location.search);
                 const teamId = urlParams.get('id');
                 const name = document.getElementById('name').value;
@@ -130,7 +130,6 @@
                     // Handle the response from the server
                     // You can perform further actions based on the response
                     })
-                e.preventDefault();
             }
         </script>
     </body>
