@@ -36,7 +36,7 @@
                 <label for="github-id">GitHub ID:</label>
                 <input type="text" id="github-id" name="githubId" required>
                 <label for="profile-link">Profile Link:</label>
-                <input type="url" id="profile-link" name="profileLink" required>
+                <input type="text" id="profile-link" name="profileLink" required>
                 <button onclick="addUser()">Create</button>
             </form>
         </div>
@@ -105,7 +105,7 @@
                 tr.appendChild(td);
                 teamContainer.appendChild(tr);
             }
-            function addUser() {
+            function addUser(e) {
                 const urlParams = new URLSearchParams(window.location.search);
                 const teamId = urlParams.get('id');
                 const name = document.getElementById('name').value;
@@ -130,6 +130,7 @@
                     // Handle the response from the server
                     // You can perform further actions based on the response
                     })
+                e.preventDefault();
             }
         </script>
     </body>
