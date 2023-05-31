@@ -39,46 +39,49 @@
 
   <script>
 var timerInterval;
-    var startTime;
-    var elapsedTime = 0;
-    var temp = 10;
+var startTime;
+var elapsedTime = 0;
+var isRunning = false;
 
-    function startTimer() {
-      if(temp >9){
-        startTime = Date.now() - elapsedTime;
-        timerInterval = setInterval(updateTimer, 10);
-      }
+function startTimer() {
+  if (!isRunning) {
+    startTime = Date.now() - elapsedTime;
+    timerInterval = setInterval(updateTimer, 10);
+    isRunning = true;
+  }
+}
 
-    }
+function stopTimer() {
+  clearInterval(timerInterval);
+  isRunning = false;
+}
 
-    function stopTimer() {
-      temp = 9;
-      clearInterval(timerInterval);
-  
-    }
+function resetTimer() {
+  clearInterval(timerInterval);
+  elapsedTime = 0;
+  startTime = Date.now(); 
+  isRunning = false;
+  updateTimer();
+}
 
-    function resetTimer() {
-      location.reload();
-    }
+function updateTimer() {
+  var currentTime = Date.now();
+  elapsedTime = currentTime - startTime;
+  var formattedTime = formatTime(elapsedTime);
+  document.querySelector('.timer').textContent = formattedTime;
+}
 
-    function updateTimer() {
-      var currentTime = Date.now();
-      elapsedTime = currentTime - startTime;
-      var formattedTime = formatTime(elapsedTime);
-      document.querySelector('.timer').textContent = formattedTime;
-    }
+function formatTime(milliseconds) {
+  var hours = Math.floor(milliseconds / (1000 * 60 * 60));
+  var minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
 
-    function formatTime(milliseconds) {
-      var hours = Math.floor(milliseconds / (1000 * 60 * 60));
-      var minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
-
-      var formattedHours = hours.toString().padStart(2, '0');
-      var formattedMinutes = minutes.toString().padStart(2, '0');
-      var formattedSeconds = seconds.toString().padStart(2, '0');
-      document.getElementById("time").innerHTML = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
-      return = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
-    }  
+  var formattedHours = hours.toString().padStart(2, '0');
+  var formattedMinutes = minutes.toString().padStart(2, '0');
+  var formattedSeconds = seconds.toString().padStart(2, '0');
+  document.getElementById("time").innerHTML = formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
+  return formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
+}
   </script>
 </body>
 </html>
