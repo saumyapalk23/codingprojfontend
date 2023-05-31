@@ -23,6 +23,7 @@
                         <th scope="col">Period</th>
                         <th scope="col">Big Team Name</th>
                         <th scope="col">Profile</th>
+                        <th scope="col">Assignment</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider" id="team">
@@ -67,6 +68,7 @@
                         const bigteam = document.createElement("td");
                         // url containers
                         const profile = document.createElement("td");
+                        const assignment = document.createElement("td");
                         // accessing JSON values
                         id.innerHTML = i;
                         bigteam.innerHTML = row.bigteam;
@@ -78,6 +80,7 @@
                         tr.appendChild(period);
                         tr.appendChild(bigteam);
                         tr.appendChild(profile);
+                        tr.appendChild(assignment);
                         // add row to table
                         teamContainer.appendChild(tr);
                         i++;
