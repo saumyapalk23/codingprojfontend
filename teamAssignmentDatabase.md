@@ -52,11 +52,22 @@
                 </tbody>
             </table>
         </div>
+        <div>
+            <h2>Add Assignment For</h2>
+        <div class="input-container">
+            <form id="create-user-form">
+                <input type="text" id="assignment" placeholder="Assignment" name="assignment" required>
+                <input type="text" id="score" placeholder="Score" name="score" required>
+                <input type="text" id="ticket" placeholder="Ticket" name="ticket" required>
+                <input type="text" id="comments" placeholder="Comments" name="comment" required>
+                <button onclick="addUser()">Create</button>
+            </form>
+        </div>
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const teamId = urlParams.get('id');
             // prepare fetch urls
-            const team_url = `https://mrr.rebeccaaa.tk/api/review/${teamId}`;
+            const team_url = `https://mrr.rebeccaaa.tk/database/reviews/${teamId}`;
             const get_url = team_url + "/";
             const teamContainer = document.getElementById("users");
             // prepare fetch GET options
@@ -120,4 +131,31 @@
                 tr.appendChild(td);
                 teamContainer.appendChild(tr);
             }
-        </script>
+            function addUser() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const teamId = urlParams.get('id');
+                const assignment = document.getElementById('assignment').value;
+                const score = document.getElementById('score').value;
+                const ticket = document.getElementById('ticket').value;
+                const comments = document.getElementById('comments').value;
+                const user = {
+                    assignment: assignment,
+                    score: score,
+                    ticket: ticket,
+                    comments: comments,
+                };
+                const endpoint = `https://mrr.rebeccaaa.tk/database/addreview/${teamId}`;
+                      fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                    console.log('User creation response:', data);
+                    // Handle the response from the server
+                    // You can perform further actions based on the response
+                    })
+            }        </script>
