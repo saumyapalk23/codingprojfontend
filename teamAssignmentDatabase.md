@@ -144,18 +144,23 @@
                     ticket: ticket,
                     comments: comments,
                 };
-                const endpoint = `https://mrr.rebeccaaa.tk/database/addreview/${teamId}`;
-                      fetch(endpoint, {
+                const options = {
                     method: 'POST',
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    credentials: 'include',
                     headers: {
                     'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(user)
-                })
+                    body: JSON.stringify(user), // convert to JSON
+                };
+                const endpoint = `https://mrr.rebeccaaa.tk/database/addreview/${teamId}`;
+                    fetch(endpoint, options)
                     .then(response => response.json())
                     .then(data => {
                     console.log('User creation response:', data);
                     // Handle the response from the server
                     // You can perform further actions based on the response
                     })
-            }        </script>
+            }        
+            </script>
