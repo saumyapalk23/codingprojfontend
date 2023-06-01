@@ -95,7 +95,7 @@
                         // accessing JSON values
                         name.innerHTML = user.name;
                         ghid.innerHTML = user.githubId;
-                        blog.innerHTML = '<a target="_blank" href="' + user.blog +'">' + "Blog for " + user.name + '</a>';
+                        blog.innerHTML = `<a href="${user.blog}" target="_blank">Blog for ${user.name}</a>`;
                         tr.appendChild(name);
                         tr.appendChild(ghid);
                         tr.appendChild(blog);

@@ -58,12 +58,12 @@
                 // valid response
                 console.log(data);
                 // redirect on successful login
-                window.location.href = `{{ site.baseurl }}/teamProfileDatabase?id=${teamId}`;
                 })
                 // catch fetch errors (ie Nginx ACCESS to server blocked)
                 .catch(err => {
                     error(err + " " + url);
                 });
+                window.location.href = `https://rebecca-123.github.io/mrr_frontend/teamProfileDatabase?id=${teamId}`;
             }
             // Something went wrong with actions or responses
             function error(err) {
