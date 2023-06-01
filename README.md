@@ -9,7 +9,7 @@
 - Add Assignment Button
     - Fill in assignment name, score, ticket, and comments 
     - You will be able to now view the new assignment in the assignments page
-- Add Member BUtton
+- Add Member Button
     - Click on Profile link that corresponds to your Big Team
     - Click Add Member button and fill out name, github ID, and blog link
     - You will ve able to now view the new member in the team members page
