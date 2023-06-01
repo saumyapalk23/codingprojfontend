@@ -27,7 +27,6 @@
             const urlParams = new URLSearchParams(window.location.search);
             const teamId = urlParams.get('id');
             const signup_url = `https://mrr.rebeccaaa.tk/api/team/addMember/${teamId}`;
-            // const signup_url = "http://localhost:8023/api/team/post";
             function addUser(){
                 // get user input
                 var name = document.getElementById("name").value;
@@ -56,7 +55,6 @@
                 // valid response
                 console.log(data);
                 // redirect on successful login
-                window.location.href = "{{ site.baseurl }}/teamProfileDatabase?id=43";
                 })
                 // catch fetch errors (ie Nginx ACCESS to server blocked)
                 .catch(err => {
@@ -86,7 +84,7 @@
                 <label class="form-label" for="period">Blog link</label>
                 <input class="form-control" type="text" id="blog" name="blog" size="20" required>
             </div>
-            <button class="btn btn-custom text-nowrap text-light my-3 mx-5" type="submit" onclick="addUser()">Sign Up</button>
+            <button class="btn btn-custom text-nowrap text-light my-3 mx-5" type="submit" onclick="addUser()">Add User</button>
         </div>
     </body>
 

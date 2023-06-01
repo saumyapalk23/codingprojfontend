@@ -91,14 +91,11 @@
                         const name = document.createElement("td");
                         const ghid = document.createElement("td");
                         const blog = document.createElement("td");
-                        const blogLink = document.createElement("a");
                         // url containers
                         // accessing JSON values
                         name.innerHTML = user.name;
                         ghid.innerHTML = user.githubId;
-                        blogLink.innerHTML = `Blog for ${user.name}`;
-                        blogLink.href = user.blog;
-                        blog.innerHTML = blogLink;
+                        blog.innerHTML = `<a target="_blank" href="http://${user.blog}">Blog for ${user.name}</a>`;
                         tr.appendChild(name);
                         tr.appendChild(ghid);
                         tr.appendChild(blog);
