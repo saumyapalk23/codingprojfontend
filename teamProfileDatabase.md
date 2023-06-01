@@ -47,7 +47,8 @@
         </style>
     <body>
         <h1 class="text-center m-5">Team Members</h1>
-        <p><a id="addUserLink">Add a member to this team</a></p>
+                <div class="input-container">
+                     <p><a id="addUserLink">Add a member to this team</a></p>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
                 <thead>
