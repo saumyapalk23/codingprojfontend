@@ -38,6 +38,7 @@
                     </style>
     <body>
         <h1 class="text-center m-5">Team Members</h1>
+         <button id="addUserLink" style="background-color: #161666; color: white; padding: 10px 20px; text-align: center; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin: 8px 5px;">ADD A MEMBER TO YOUR TEAM</button>
         <p><a id="addUserLink">Add a member to this team</a></p>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
