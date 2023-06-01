@@ -89,7 +89,7 @@
                 <label class="form-label" for="period">Comments</label>
                 <input class="form-control" type="text" id="blog" name="blog" size="250" required>
             </div>
-            <button class="btn btn-custom text-nowrap text-light my-3 mx-5" type="submit" onclick="addUser()">Add Assignment</button>
+            <button class="btn btn-custom text-nowrap text-light my-3 mx-5" type="submit" onclick="addAssignment()">Add Assignment</button>
         </div>
     </body>
 
