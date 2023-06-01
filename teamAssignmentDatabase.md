@@ -35,6 +35,15 @@
        body {
             background-color: #01060d;
         }
+        #addAssignmentLink {
+        padding: 10px 20px;
+        background-color: #161666;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 8px 5px;    }
                     </style>
 <body>
         <h1 class="text-center m-5">Team Assignments</h1>
@@ -52,20 +61,13 @@
                 </tbody>
             </table>
         </div>
-        <div>
-            <h2 class="text-center m-5">ADD AN ASSIGNMENT</h2>
-        <div class="input-container">
-            <form id="create-user-form">
-                <input type="text" id="assignment" placeholder="Assignment" name="assignment" required>
-                <input type="text" id="score" placeholder="Score" name="score" required>
-                <input type="text" id="ticket" placeholder="Ticket" name="ticket" required>
-                <input type="text" id="comments" placeholder="Comments" name="comment" required>
-                <button onclick="addUser()">Create</button>
-            </form>
-        </div>
+            <div class="input-container">
+                <p><a id="addAssignmentLink">Add Assignment</a></p>
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const teamId = urlParams.get('id');
+            var a = document.getElementById('addAssignmentLink');
+            a.href = `https://rebecca-123.github.io/mrr_frontend/addAssignment?id=${teamId}`
             // prepare fetch urls
             const team_url = `https://mrr.rebeccaaa.tk/database/reviews/${teamId}`;
             const get_url = team_url + "/";
@@ -131,7 +133,7 @@
                 tr.appendChild(td);
                 teamContainer.appendChild(tr);
             }
-            function addUser() {
+            function addAssignment() {
                 const urlParams = new URLSearchParams(window.location.search);
                 const teamId = urlParams.get('id');
                 const assignment = document.getElementById('assignment').value;
