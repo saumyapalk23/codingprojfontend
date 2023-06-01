@@ -92,7 +92,7 @@
                 }
                 // valid response will have JSON data
                 response.json().then(data => {
-                    const assignments = data.assignments;
+                    const assignments = data;
                     for (const assign of assignments) {
                         console.log(assign);
                         // columns
