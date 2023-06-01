@@ -28,7 +28,7 @@
 			<input type="text" id="repo" placeholder="Repository Name">
 			<button onclick="addRepo()">Add Repository</button>
         </div>
-		<script src="config.js"></script>
+		<script src="config2.js"></script>
         <script>
             function addStudent() {
                 // const tableBody = document.getElementById('students');
