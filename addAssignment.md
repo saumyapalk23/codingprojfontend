@@ -75,19 +75,19 @@
             <!-- 'email' is mapped to 'username' for Spring Security -->
             <div class="mb-3 px-5">
                 <label class="form-label" for="name">Assignment</label>
-                <input class="form-control" type="text" id="name" name="name" size="250" required>
+                <input class="form-control" type="text" id="assignment" name="assignment" size="250" required>
             </div>
             <div class="mb-3 px-5">
                 <label class="form-label" for="names">Score</label>
-                <input class="form-control" type="text" id="ghid" name="ghid" size="50" required>
+                <input class="form-control" type="text" id="score" name="score" size="50" required>
             </div>
             <div class="mb-3 px-5">
                 <label class="form-label" for="period">Ticket</label>
-                <input class="form-control" type="text" id="blog" name="blog" size="20" required>
+                <input class="form-control" type="text" id="ticket" name="ticket" size="20" required>
             </div>
             <div class="mb-3 px-5">
                 <label class="form-label" for="period">Comments</label>
-                <input class="form-control" type="text" id="blog" name="blog" size="250" required>
+                <input class="form-control" type="text" id="comments" name="comments" size="250" required>
             </div>
             <button class="btn btn-custom text-nowrap text-light my-3 mx-5" type="submit" onclick="addAssignment()">Add Assignment</button>
         </div>
