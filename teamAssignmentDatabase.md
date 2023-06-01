@@ -92,9 +92,9 @@
                 }
                 // valid response will have JSON data
                 response.json().then(data => {
-                    const users = data.names;
-                    for (const user of users) {
-                        console.log(user);
+                    const assignments = data.assignments;
+                    for (const assign of assignments) {
+                        console.log(assign);
                         // columns
                         const tr = document.createElement("tr");
                         const assignment = document.createElement("td");
@@ -103,10 +103,10 @@
                         const comments = document.createElement("td");
                         // url containers
                         // accessing JSON values
-                        assignment.innerHTML = user.assignment;
-                        score.innerHTML = user.score;
-                        ticket.innerHTML = user.ticket;
-                        comments.innerHTML = user.comments;
+                        assignment.innerHTML = assign.assignment;
+                        score.innerHTML = assign.score;
+                        ticket.innerHTML = assign.ticket;
+                        comments.innerHTML = assign.comments;
                         tr.appendChild(assignment);
                         tr.appendChild(score);
                         tr.appendChild(ticket);
