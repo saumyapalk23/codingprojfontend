@@ -1,5 +1,5 @@
 const config = {
-    githubToken: "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"
+    githubToken: "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"
   };
   
   export default config;
