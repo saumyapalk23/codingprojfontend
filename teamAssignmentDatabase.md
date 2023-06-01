@@ -53,7 +53,7 @@
             </table>
         </div>
         <div>
-            <h2>Add Assignment For</h2>
+            <h2 class="text-center m-5">ADD AN ASSIGNMENT</h2>
         <div class="input-container">
             <form id="create-user-form">
                 <input type="text" id="assignment" placeholder="Assignment" name="assignment" required>
