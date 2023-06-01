@@ -35,11 +35,19 @@
        body {
             background-color: #01060d;
         }
-                    </style>
+        #addUserLink {
+        padding: 10px 20px;
+        background-color: #161666;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 8px 5px;    }
+        </style>
     <body>
         <h1 class="text-center m-5">Team Members</h1>
-                <div class="input-container">
-<button id="addUserLink" style="background-color: #161666; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 4px; border: none; cursor: pointer;" onclick="window.location.href='https://rebecca-123.github.io/mrr_frontend/addUser?id=null';">Add a member to this team</button>
+        <p><a id="addUserLink">Add a member to this team</a></p>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
                 <thead>
