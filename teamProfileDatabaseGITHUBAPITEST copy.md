@@ -8,6 +8,7 @@
                 <thead>
                     <tr>
                         <th scope="col"> Student Name </th>
+                        <th scope="col"> Last Github Update </th>
                         <th scope="col"> Github ID </th>
                         <!-- <th scope="col">Blog</th>
                         <th scope="col">Github Insights</th> -->
@@ -24,6 +25,8 @@
             <input type="text" id="username" placeholder="GitHub Username">
             <button onclick="addStudent()">Add Student</button>
             <!--<button onclick="fetchTotalCommits()">Fetch Total Commits</button> -->
+			<input type="text" id="repo" placeholder="Repository Name">
+			<button onclick="addRepo()">Add Repository</button>
         </div>
         <script>
             function addStudent() {
@@ -38,6 +41,8 @@
                 var newRow = tableBody.insertRow();
                 var studentNameCell = newRow.insertCell();
                 studentNameCell.textContent = " ";
+                var lastUpdateCell = newRow.insertCell();
+                lastUpdateCell.textContent = " ";
                 var userNameCell = newRow.insertCell();
                 userNameCell.textContent = userNameInput.value;
                 var totalCommitsCell = newRow.insertCell();
@@ -46,7 +51,7 @@
                 var fetchCommitsButton = document.createElement('button');
                 fetchCommitsButton.textContent = 'Fetch Data';
                 fetchCommitsButton.onclick = function() {
-                fetchTotalCommits(userNameInput.value, studentNameCell, totalCommitsCell);
+                fetchGitData(userNameInput.value, studentNameCell, totalCommitsCell, lastUpdateCell);
                 };
                 buttonCell.appendChild(fetchCommitsButton);
                 //reset fields
@@ -56,19 +61,53 @@
                 // row.insertCell(1).innerHTML = userName.value;
                 // row.insertCell(2).innerHTML = 0;
         }
-        function fetchTotalCommits(username, studentCell, commitsCell) {
+		function addRepo(){
+			var repoNameInput = document.getElementById("repo")
+			var repoName = repoNameInput.value;
+			var tableHeader = document.querySelector('#table-container thead tr');
+			var tableBody = document.getElementById('students');
+			var rows = tableBody.getElementsByTagName('tr');
+			var newHeaderCell = document.createElement('th');
+			newHeaderCell.textContent = repoName;
+			tableHeader.appendChild(newHeaderCell);
+			var newHeaderCell = document.createElement('th');
+			newHeaderCell.textContent = repoName;
+			tableHeader.appendChild(newHeaderCell);
+			//const url = `https://api.github.com/repos/rebecca-123/${repoName}/commits?author=MAnn223`;
+		}
+		```javascript
+import config from './config.json';
+        function fetchGitData(username, studentCell, commitsCell, lastupdateCell) {
             const url = `https://api.github.com/users/${username}`;
             // var tableBody = document.getElementById('students');
             // var numRows = tableBody.getElementsByTagName('tr');
             fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      commitsCell.textContent = data.public_repos;
-      studentCell.textContent = data.name;
-    })
-    .catch(error => console.error(error));
-        }
-            // const userName = ;
+				.then(response => response.json())
+				.then(data => {
+				  commitsCell.textContent = data.public_repos;
+				  studentCell.textContent = data.name;
+				lastupdateCell.textContent = data.updated_at;
+				})
+				.catch(error => console.error(error));
+		const repoName = document.getElementById("repo").value;
+		const token = config.githubToken;
+		const headers = {
+        Authorization: `Bearer ${token}`
+        };
+		const repoUrl = `https://api.github.com/repos/rebecca-123/${repoName}/commits?author=${username}`
+		if (repoName !== '') {		
+			fetch(repoUrl, { headers })
+			.then(response => response.json())
+			.then(repoData => {
+			const totalCommits = repoData.length; //endpoint returns all commits, loop through 
+			const row = commitsCell.parentNode;
+			const commitsIndex = Array.from(commitsCell.parentNode.children).indexOf(commitsCell);
+		     const repoCommitsCell = commitsCell.parentNode.insertCell(commitsIndex + 1);
+			  repoCommitsCell.textContent = totalCommits;
+			})
+		.catch(error => console.error(error));
+					}
+      // const userName = ;
             // fetch('test.json')
             // .then(response => response.json())
             // .then(data => {
@@ -83,3 +122,6 @@
         </script>
     </body>
 </html>
+
+
+
