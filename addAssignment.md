@@ -34,7 +34,7 @@
                 var ticket = document.getElementById("ticket").value;
                 var comments = document.getElementById("comments").value;
                 // store data in JavaScript object
-                let data = {"name": name, "githubId": ghid, "blog": blog};
+                let data = {"assignment": assignment, "score": score, "ticket": ticket, "comments": comments};
                 console.log(data);
                 const options = {
                     method: 'POST',
