@@ -32,6 +32,7 @@
         <script>
             function addStudent() {
                 // const tableBody = document.getElementById('students');
+                //upd
                 // const username = document.getElementById('username').value;
                 // const newRow = document.createElement('tr');
                 // const nameCell = document.createElement('td');
