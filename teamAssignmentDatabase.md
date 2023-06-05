@@ -35,6 +35,15 @@
        body {
             background-color: #01060d;
         }
+        #addAssignmentLink {
+        padding: 10px 20px;
+        background-color: #161666;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 8px 5px;    }
                     </style>
 <body>
         <h1 class="text-center m-5">Team Assignments</h1>
@@ -52,22 +61,15 @@
                 </tbody>
             </table>
         </div>
-        <div>
-            <h2>Add Assignment For</h2>
-        <div class="input-container">
-            <form id="create-user-form">
-                <input type="text" id="assignment" placeholder="Assignment" name="assignment" required>
-                <input type="text" id="score" placeholder="Score" name="score" required>
-                <input type="text" id="ticket" placeholder="Ticket" name="ticket" required>
-                <input type="text" id="comments" placeholder="Comments" name="comment" required>
-                <button onclick="addUser()">Create</button>
-            </form>
-        </div>
+            <div class="input-container">
+                <p><a id="addAssignmentLink">Add Assignment</a></p>
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const teamId = urlParams.get('id');
+            var a = document.getElementById('addAssignmentLink');
+            a.href = `https://rebecca-123.github.io/mrr_frontend/addAssignment?id=${teamId}`
             // prepare fetch urls
-            const team_url = `https://mrr.rebeccaaa.tk/api/review/${teamId}`;
+            const team_url = `https://mrr.rebeccaaa.tk/database/reviews/${teamId}`;
             const get_url = team_url + "/";
             const teamContainer = document.getElementById("users");
             // prepare fetch GET options
@@ -92,9 +94,9 @@
                 }
                 // valid response will have JSON data
                 response.json().then(data => {
-                    const users = data.names;
-                    for (const user of users) {
-                        console.log(user);
+                    const assignments = data;
+                    for (const assign of assignments) {
+                        console.log(assign);
                         // columns
                         const tr = document.createElement("tr");
                         const assignment = document.createElement("td");
@@ -103,10 +105,10 @@
                         const comments = document.createElement("td");
                         // url containers
                         // accessing JSON values
-                        assignment.innerHTML = user.assignment;
-                        score.innerHTML = user.score;
-                        ticket.innerHTML = user.ticket;
-                        comments.innerHTML = user.comments;
+                        assignment.innerHTML = assign.assignment;
+                        score.innerHTML = assign.score;
+                        ticket.innerHTML = assign.ticket;
+                        comments.innerHTML = assign.comments;
                         tr.appendChild(assignment);
                         tr.appendChild(score);
                         tr.appendChild(ticket);
@@ -131,7 +133,7 @@
                 tr.appendChild(td);
                 teamContainer.appendChild(tr);
             }
-            function addUser() {
+            function addAssignment() {
                 const urlParams = new URLSearchParams(window.location.search);
                 const teamId = urlParams.get('id');
                 const assignment = document.getElementById('assignment').value;
@@ -144,18 +146,23 @@
                     ticket: ticket,
                     comments: comments,
                 };
-                const endpoint = `https://mrr.rebeccaaa.tk/api/review/post/${teamId}`;
-                      fetch(endpoint, {
+                const options = {
                     method: 'POST',
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    credentials: 'include',
                     headers: {
                     'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(user)
-                })
+                    body: JSON.stringify(user), // convert to JSON
+                };
+                const endpoint = `https://mrr.rebeccaaa.tk/database/addreview/${teamId}`;
+                    fetch(endpoint, options)
                     .then(response => response.json())
                     .then(data => {
                     console.log('User creation response:', data);
                     // Handle the response from the server
                     // You can perform further actions based on the response
                     })
-            }        </script>
+            }        
+            </script>

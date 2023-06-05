@@ -35,9 +35,20 @@
        body {
             background-color: #01060d;
         }
-                    </style>
-<body>
-        <h1 class="text-center m-5">Team Profile</h1>
+        #addUserLink {
+        padding: 10px 20px;
+        background-color: #161666;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 8px 5px;    }
+        </style>
+    <body>
+        <h1 class="text-center m-5">Team Members</h1>
+                <div class="input-container">
+                     <p><a id="addUserLink">ADD A MEMBER TO YOUR TEAM</a></p>
         <div class="table-responsive mx-5">
             <table id="table-container" class="table table-hover table-bordered border-secondary mb-5">
                 <thead>
@@ -51,19 +62,11 @@
                 </tbody>
             </table>
         </div>
-        <div>
-            <h2 class="text-center m-5">ADD A USER TO THE TEAM</h2>
-        <div class="input-container">
-            <form id="create-user-form">
-                <input type="text" id="name" placeholder="Name" name="name" required>
-                <input type="text" id="github-id" placeholder="GitHub ID" name="githubId" required>
-                <input type="text" id="profile-link" placeholder="Profile Link" name="profileLink" required>
-                <button type="submit" onclick="addUser()">Create</button>
-            </form>
-        </div>
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const teamId = urlParams.get('id');
+            var a = document.getElementById('addUserLink');
+            a.href = `https://rebecca-123.github.io/mrr_frontend/addUser?id=${teamId}`
             // prepare fetch urls
             const team_url = `https://mrr.rebeccaaa.tk/api/team/${teamId}`;
             const get_url = team_url + "/";
@@ -102,7 +105,7 @@
                         // accessing JSON values
                         name.innerHTML = user.name;
                         ghid.innerHTML = user.githubId;
-                        blog.innerHTML = '<a target="_blank" href="' + user.blog +'">' + "Blog for " + user.name + '</a>';
+                        blog.innerHTML = `<a target="_blank" href="http://${user.blog}">Blog for ${user.name}</a>`;
                         tr.appendChild(name);
                         tr.appendChild(ghid);
                         tr.appendChild(blog);
