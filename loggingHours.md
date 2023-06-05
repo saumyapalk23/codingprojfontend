@@ -39,43 +39,54 @@
   </div>
   
   <script>
-var timerInterval;
-var startTime;
-var elapsedTime = 0;
-var isRunning = false;
+// Declare global variables
+var timerInterval; // Holds the interval ID for the timer
+var startTime; // Holds the starting time of the timer
+var elapsedTime = 0; // Holds the elapsed time in milliseconds
+var isRunning = false; // Indicates whether the timer is currently running or not
+
+// Function to start the timer
 function startTimer() {
-  if (!isRunning) {
-    startTime = Date.now() - elapsedTime;
-    timerInterval = setInterval(updateTimer, 10);
-    isRunning = true;
+  if (!isRunning) { // Only start the timer if it's not already running
+    startTime = Date.now() - elapsedTime; // Calculate the starting time by subtracting the elapsed time from the current time
+    timerInterval = setInterval(updateTimer, 10); // Set an interval to update the timer every 10 milliseconds
+    isRunning = true; // Set the running flag to true
   }
 }
+
+// Function to stop the timer
 function stopTimer() {
-  clearInterval(timerInterval);
-  isRunning = false;
+  clearInterval(timerInterval); // Clear the interval to stop the timer
+  isRunning = false; // Set the running flag to false
 }
+
+// Function to reset the timer
 function resetTimer() {
-  clearInterval(timerInterval);
-  elapsedTime = 0;
-  startTime = Date.now(); 
-  isRunning = false;
-  updateTimer();
+  clearInterval(timerInterval); // Clear the interval to stop the timer
+  elapsedTime = 0; // Reset the elapsed time to 0
+  startTime = Date.now(); // Update the starting time to the current time
+  isRunning = false; // Set the running flag to false
+  updateTimer(); // Update the timer display immediately
 }
+
+// Function to update the timer display
 function updateTimer() {
-  var currentTime = Date.now();
-  elapsedTime = currentTime - startTime;
-  var formattedTime = formatTime(elapsedTime);
-  document.querySelector('.timer').textContent = formattedTime;
+  var currentTime = Date.now(); // Get the current time
+  elapsedTime = currentTime - startTime; // Calculate the elapsed time by subtracting the starting time from the current time
+  var formattedTime = formatTime(elapsedTime); // Format the elapsed time in HH:MM:SS format
+  document.querySelector('.timer').textContent = formattedTime; // Update the timer display on the webpage
 }
+
+// Function to format the elapsed time in HH:MM:SS format
 function formatTime(milliseconds) {
-  var hours = Math.floor(milliseconds / (1000 * 60 * 60));
-  var minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
-  var formattedHours = hours.toString().padStart(2, '0');
-  var formattedMinutes = minutes.toString().padStart(2, '0');
-  var formattedSeconds = seconds.toString().padStart(2, '0');
+  var hours = Math.floor(milliseconds / (1000 * 60 * 60)); // Calculate the number of hours
+  var minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60)); // Calculate the number of minutes
+  var seconds = Math.floor((milliseconds % (1000 * 60)) / 1000); // Calculate the number of seconds
+  var formattedHours = hours.toString().padStart(2, '0'); // Format the hours with leading zeros if necessary
+  var formattedMinutes = minutes.toString().padStart(2, '0'); // Format the minutes with leading zeros if necessary
+  var formattedSeconds = seconds.toString().padStart(2, '0'); // Format the seconds with leading zeros if necessary
   
-  return formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
+  return formattedHours + ':' + formattedMinutes + ':' + formattedSeconds; // Return the formatted time as a string
 }
   </script>
 </body>
