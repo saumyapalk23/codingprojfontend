@@ -7,7 +7,7 @@
             .bg-color{
                 background-color: #161666;
             }
-            .btn-custom {
+            .btn-custom {  
                 color: #fff;
                 background-color: #193387;
                 border-color: #ffffff;
